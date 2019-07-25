@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		45567DB922EA179B0007CF05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45567DB822EA179B0007CF05 /* AppDelegate.swift */; };
+		45567DBB22EA179B0007CF05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45567DBA22EA179B0007CF05 /* ViewController.swift */; };
+		45567DBE22EA179B0007CF05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45567DBC22EA179B0007CF05 /* Main.storyboard */; };
+		45567DC122EA179B0007CF05 /* FindYourMechanicalWorkshop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45567DBF22EA179B0007CF05 /* FindYourMechanicalWorkshop.xcdatamodeld */; };
+		45567DC322EA179E0007CF05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45567DC222EA179E0007CF05 /* Assets.xcassets */; };
+		45567DC622EA179E0007CF05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45567DC422EA179E0007CF05 /* LaunchScreen.storyboard */; };
+		45567DD122EA179E0007CF05 /* FindYourMechanicalWorkshopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45567DD022EA179E0007CF05 /* FindYourMechanicalWorkshopTests.swift */; };
+		45567DDC22EA179F0007CF05 /* FindYourMechanicalWorkshopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45567DDB22EA179F0007CF05 /* FindYourMechanicalWorkshopUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		45567DCD22EA179E0007CF05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45567DAD22EA179B0007CF05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45567DB422EA179B0007CF05;
+			remoteInfo = FindYourMechanicalWorkshop;
+		};
+		45567DD822EA179E0007CF05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45567DAD22EA179B0007CF05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45567DB422EA179B0007CF05;
+			remoteInfo = FindYourMechanicalWorkshop;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		45567DB522EA179B0007CF05 /* FindYourMechanicalWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindYourMechanicalWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45567DB822EA179B0007CF05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		45567DBA22EA179B0007CF05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		45567DBD22EA179B0007CF05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		45567DC022EA179B0007CF05 /* FindYourMechanicalWorkshop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FindYourMechanicalWorkshop.xcdatamodel; sourceTree = "<group>"; };
+		45567DC222EA179E0007CF05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		45567DC522EA179E0007CF05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		45567DC722EA179E0007CF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45567DCC22EA179E0007CF05 /* FindYourMechanicalWorkshopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindYourMechanicalWorkshopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45567DD022EA179E0007CF05 /* FindYourMechanicalWorkshopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindYourMechanicalWorkshopTests.swift; sourceTree = "<group>"; };
+		45567DD222EA179E0007CF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45567DD722EA179E0007CF05 /* FindYourMechanicalWorkshopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindYourMechanicalWorkshopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45567DDB22EA179F0007CF05 /* FindYourMechanicalWorkshopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindYourMechanicalWorkshopUITests.swift; sourceTree = "<group>"; };
+		45567DDD22EA179F0007CF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		45567DB222EA179B0007CF05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45567DC922EA179E0007CF05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45567DD422EA179E0007CF05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		45567DAC22EA179B0007CF05 = {
+			isa = PBXGroup;
+			children = (
+				45567DB722EA179B0007CF05 /* FindYourMechanicalWorkshop */,
+				45567DCF22EA179E0007CF05 /* FindYourMechanicalWorkshopTests */,
+				45567DDA22EA179E0007CF05 /* FindYourMechanicalWorkshopUITests */,
+				45567DB622EA179B0007CF05 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		45567DB622EA179B0007CF05 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45567DB522EA179B0007CF05 /* FindYourMechanicalWorkshop.app */,
+				45567DCC22EA179E0007CF05 /* FindYourMechanicalWorkshopTests.xctest */,
+				45567DD722EA179E0007CF05 /* FindYourMechanicalWorkshopUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45567DB722EA179B0007CF05 /* FindYourMechanicalWorkshop */ = {
+			isa = PBXGroup;
+			children = (
+				45567DB822EA179B0007CF05 /* AppDelegate.swift */,
+				45567DBA22EA179B0007CF05 /* ViewController.swift */,
+				45567DBC22EA179B0007CF05 /* Main.storyboard */,
+				45567DC222EA179E0007CF05 /* Assets.xcassets */,
+				45567DC422EA179E0007CF05 /* LaunchScreen.storyboard */,
+				45567DC722EA179E0007CF05 /* Info.plist */,
+				45567DBF22EA179B0007CF05 /* FindYourMechanicalWorkshop.xcdatamodeld */,
+			);
+			path = FindYourMechanicalWorkshop;
+			sourceTree = "<group>";
+		};
+		45567DCF22EA179E0007CF05 /* FindYourMechanicalWorkshopTests */ = {
+			isa = PBXGroup;
+			children = (
+				45567DD022EA179E0007CF05 /* FindYourMechanicalWorkshopTests.swift */,
+				45567DD222EA179E0007CF05 /* Info.plist */,
+			);
+			path = FindYourMechanicalWorkshopTests;
+			sourceTree = "<group>";
+		};
+		45567DDA22EA179E0007CF05 /* FindYourMechanicalWorkshopUITests */ = {
+			isa = PBXGroup;
+			children = (
+				45567DDB22EA179F0007CF05 /* FindYourMechanicalWorkshopUITests.swift */,
+				45567DDD22EA179F0007CF05 /* Info.plist */,
+			);
+			path = FindYourMechanicalWorkshopUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		45567DB422EA179B0007CF05 /* FindYourMechanicalWorkshop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45567DE022EA179F0007CF05 /* Build configuration list for PBXNativeTarget "FindYourMechanicalWorkshop" */;
+			buildPhases = (
+				45567DB122EA179B0007CF05 /* Sources */,
+				45567DB222EA179B0007CF05 /* Frameworks */,
+				45567DB322EA179B0007CF05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FindYourMechanicalWorkshop;
+			productName = FindYourMechanicalWorkshop;
+			productReference = 45567DB522EA179B0007CF05 /* FindYourMechanicalWorkshop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		45567DCB22EA179E0007CF05 /* FindYourMechanicalWorkshopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45567DE322EA179F0007CF05 /* Build configuration list for PBXNativeTarget "FindYourMechanicalWorkshopTests" */;
+			buildPhases = (
+				45567DC822EA179E0007CF05 /* Sources */,
+				45567DC922EA179E0007CF05 /* Frameworks */,
+				45567DCA22EA179E0007CF05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45567DCE22EA179E0007CF05 /* PBXTargetDependency */,
+			);
+			name = FindYourMechanicalWorkshopTests;
+			productName = FindYourMechanicalWorkshopTests;
+			productReference = 45567DCC22EA179E0007CF05 /* FindYourMechanicalWorkshopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		45567DD622EA179E0007CF05 /* FindYourMechanicalWorkshopUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45567DE622EA179F0007CF05 /* Build configuration list for PBXNativeTarget "FindYourMechanicalWorkshopUITests" */;
+			buildPhases = (
+				45567DD322EA179E0007CF05 /* Sources */,
+				45567DD422EA179E0007CF05 /* Frameworks */,
+				45567DD522EA179E0007CF05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45567DD922EA179E0007CF05 /* PBXTargetDependency */,
+			);
+			name = FindYourMechanicalWorkshopUITests;
+			productName = FindYourMechanicalWorkshopUITests;
+			productReference = 45567DD722EA179E0007CF05 /* FindYourMechanicalWorkshopUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		45567DAD22EA179B0007CF05 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Ana Carolina Silva";
+				TargetAttributes = {
+					45567DB422EA179B0007CF05 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					45567DCB22EA179E0007CF05 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 45567DB422EA179B0007CF05;
+					};
+					45567DD622EA179E0007CF05 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 45567DB422EA179B0007CF05;
+					};
+				};
+			};
+			buildConfigurationList = 45567DB022EA179B0007CF05 /* Build configuration list for PBXProject "FindYourMechanicalWorkshop" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 45567DAC22EA179B0007CF05;
+			productRefGroup = 45567DB622EA179B0007CF05 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				45567DB422EA179B0007CF05 /* FindYourMechanicalWorkshop */,
+				45567DCB22EA179E0007CF05 /* FindYourMechanicalWorkshopTests */,
+				45567DD622EA179E0007CF05 /* FindYourMechanicalWorkshopUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		45567DB322EA179B0007CF05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45567DC622EA179E0007CF05 /* LaunchScreen.storyboard in Resources */,
+				45567DC322EA179E0007CF05 /* Assets.xcassets in Resources */,
+				45567DBE22EA179B0007CF05 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45567DCA22EA179E0007CF05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45567DD522EA179E0007CF05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45567DB122EA179B0007CF05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45567DBB22EA179B0007CF05 /* ViewController.swift in Sources */,
+				45567DC122EA179B0007CF05 /* FindYourMechanicalWorkshop.xcdatamodeld in Sources */,
+				45567DB922EA179B0007CF05 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45567DC822EA179E0007CF05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45567DD122EA179E0007CF05 /* FindYourMechanicalWorkshopTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45567DD322EA179E0007CF05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45567DDC22EA179F0007CF05 /* FindYourMechanicalWorkshopUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		45567DCE22EA179E0007CF05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45567DB422EA179B0007CF05 /* FindYourMechanicalWorkshop */;
+			targetProxy = 45567DCD22EA179E0007CF05 /* PBXContainerItemProxy */;
+		};
+		45567DD922EA179E0007CF05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45567DB422EA179B0007CF05 /* FindYourMechanicalWorkshop */;
+			targetProxy = 45567DD822EA179E0007CF05 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		45567DBC22EA179B0007CF05 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45567DBD22EA179B0007CF05 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		45567DC422EA179E0007CF05 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45567DC522EA179E0007CF05 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		45567DDE22EA179F0007CF05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		45567DDF22EA179F0007CF05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		45567DE122EA179F0007CF05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JQQC38YQ4S;
+				INFOPLIST_FILE = FindYourMechanicalWorkshop/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anacarolinasantos.FindYourMechanicalWorkshop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		45567DE222EA179F0007CF05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JQQC38YQ4S;
+				INFOPLIST_FILE = FindYourMechanicalWorkshop/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anacarolinasantos.FindYourMechanicalWorkshop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		45567DE422EA179F0007CF05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JQQC38YQ4S;
+				INFOPLIST_FILE = FindYourMechanicalWorkshopTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anacarolinasantos.FindYourMechanicalWorkshopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindYourMechanicalWorkshop.app/FindYourMechanicalWorkshop";
+			};
+			name = Debug;
+		};
+		45567DE522EA179F0007CF05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JQQC38YQ4S;
+				INFOPLIST_FILE = FindYourMechanicalWorkshopTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anacarolinasantos.FindYourMechanicalWorkshopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindYourMechanicalWorkshop.app/FindYourMechanicalWorkshop";
+			};
+			name = Release;
+		};
+		45567DE722EA179F0007CF05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JQQC38YQ4S;
+				INFOPLIST_FILE = FindYourMechanicalWorkshopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anacarolinasantos.FindYourMechanicalWorkshopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FindYourMechanicalWorkshop;
+			};
+			name = Debug;
+		};
+		45567DE822EA179F0007CF05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JQQC38YQ4S;
+				INFOPLIST_FILE = FindYourMechanicalWorkshopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anacarolinasantos.FindYourMechanicalWorkshopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FindYourMechanicalWorkshop;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		45567DB022EA179B0007CF05 /* Build configuration list for PBXProject "FindYourMechanicalWorkshop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45567DDE22EA179F0007CF05 /* Debug */,
+				45567DDF22EA179F0007CF05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45567DE022EA179F0007CF05 /* Build configuration list for PBXNativeTarget "FindYourMechanicalWorkshop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45567DE122EA179F0007CF05 /* Debug */,
+				45567DE222EA179F0007CF05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45567DE322EA179F0007CF05 /* Build configuration list for PBXNativeTarget "FindYourMechanicalWorkshopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45567DE422EA179F0007CF05 /* Debug */,
+				45567DE522EA179F0007CF05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45567DE622EA179F0007CF05 /* Build configuration list for PBXNativeTarget "FindYourMechanicalWorkshopUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45567DE722EA179F0007CF05 /* Debug */,
+				45567DE822EA179F0007CF05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		45567DBF22EA179B0007CF05 /* FindYourMechanicalWorkshop.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				45567DC022EA179B0007CF05 /* FindYourMechanicalWorkshop.xcdatamodel */,
+			);
+			currentVersion = 45567DC022EA179B0007CF05 /* FindYourMechanicalWorkshop.xcdatamodel */;
+			path = FindYourMechanicalWorkshop.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 45567DAD22EA179B0007CF05 /* Project object */;
+}
