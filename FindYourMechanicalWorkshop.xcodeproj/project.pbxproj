@@ -3,20 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0D38116C3D6E45814FD5F06D /* Pods_FindYourMechanicalWorkshopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE442A9DCEC136AB418E2099 /* Pods_FindYourMechanicalWorkshopTests.framework */; };
 		3A6D4CBF0005DB178C99F583 /* Pods_FindYourMechanicalWorkshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B993C094540F24DC61C9124E /* Pods_FindYourMechanicalWorkshop.framework */; };
 		45567DB922EA179B0007CF05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45567DB822EA179B0007CF05 /* AppDelegate.swift */; };
-		45567DBB22EA179B0007CF05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45567DBA22EA179B0007CF05 /* ViewController.swift */; };
-		45567DBE22EA179B0007CF05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45567DBC22EA179B0007CF05 /* Main.storyboard */; };
 		45567DC122EA179B0007CF05 /* FindYourMechanicalWorkshop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45567DBF22EA179B0007CF05 /* FindYourMechanicalWorkshop.xcdatamodeld */; };
 		45567DC322EA179E0007CF05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45567DC222EA179E0007CF05 /* Assets.xcassets */; };
 		45567DC622EA179E0007CF05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45567DC422EA179E0007CF05 /* LaunchScreen.storyboard */; };
 		45567DD122EA179E0007CF05 /* FindYourMechanicalWorkshopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45567DD022EA179E0007CF05 /* FindYourMechanicalWorkshopTests.swift */; };
 		45567DDC22EA179F0007CF05 /* FindYourMechanicalWorkshopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45567DDB22EA179F0007CF05 /* FindYourMechanicalWorkshopUITests.swift */; };
+		457C21E822EB8803001AA9F0 /* WorkshopList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457C21E222EB8803001AA9F0 /* WorkshopList.storyboard */; };
+		457C21E922EB8803001AA9F0 /* WorkshopListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C21E322EB8803001AA9F0 /* WorkshopListPresenter.swift */; };
+		457C21EA22EB8803001AA9F0 /* WorkshopListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C21E422EB8803001AA9F0 /* WorkshopListRouter.swift */; };
+		457C21EB22EB8803001AA9F0 /* WorkshopListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C21E522EB8803001AA9F0 /* WorkshopListProtocols.swift */; };
+		457C21EC22EB8803001AA9F0 /* WorkshopListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C21E622EB8803001AA9F0 /* WorkshopListInteractor.swift */; };
+		457C21ED22EB8803001AA9F0 /* WorkshopListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C21E722EB8803001AA9F0 /* WorkshopListView.swift */; };
 		B1A4F102A932F4A2A7C9202C /* Pods_FindYourMechanicalWorkshopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71CF13A20D16A916809E321D /* Pods_FindYourMechanicalWorkshopUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,8 +44,6 @@
 /* Begin PBXFileReference section */
 		45567DB522EA179B0007CF05 /* FindYourMechanicalWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindYourMechanicalWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45567DB822EA179B0007CF05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		45567DBA22EA179B0007CF05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		45567DBD22EA179B0007CF05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45567DC022EA179B0007CF05 /* FindYourMechanicalWorkshop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FindYourMechanicalWorkshop.xcdatamodel; sourceTree = "<group>"; };
 		45567DC222EA179E0007CF05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45567DC522EA179E0007CF05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +54,12 @@
 		45567DD722EA179E0007CF05 /* FindYourMechanicalWorkshopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindYourMechanicalWorkshopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45567DDB22EA179F0007CF05 /* FindYourMechanicalWorkshopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindYourMechanicalWorkshopUITests.swift; sourceTree = "<group>"; };
 		45567DDD22EA179F0007CF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		457C21E222EB8803001AA9F0 /* WorkshopList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkshopList.storyboard; sourceTree = "<group>"; };
+		457C21E322EB8803001AA9F0 /* WorkshopListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopListPresenter.swift; sourceTree = "<group>"; };
+		457C21E422EB8803001AA9F0 /* WorkshopListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopListRouter.swift; sourceTree = "<group>"; };
+		457C21E522EB8803001AA9F0 /* WorkshopListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopListProtocols.swift; sourceTree = "<group>"; };
+		457C21E622EB8803001AA9F0 /* WorkshopListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopListInteractor.swift; sourceTree = "<group>"; };
+		457C21E722EB8803001AA9F0 /* WorkshopListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopListView.swift; sourceTree = "<group>"; };
 		4BAF714E32589E77CEB90CB3 /* Pods-FindYourMechanicalWorkshopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourMechanicalWorkshopUITests.debug.xcconfig"; path = "Target Support Files/Pods-FindYourMechanicalWorkshopUITests/Pods-FindYourMechanicalWorkshopUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		71CF13A20D16A916809E321D /* Pods_FindYourMechanicalWorkshopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindYourMechanicalWorkshopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B29E512DD2019D25D81A367 /* Pods-FindYourMechanicalWorkshopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourMechanicalWorkshopTests.debug.xcconfig"; path = "Target Support Files/Pods-FindYourMechanicalWorkshopTests/Pods-FindYourMechanicalWorkshopTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,12 +125,9 @@
 			isa = PBXGroup;
 			children = (
 				45567DB822EA179B0007CF05 /* AppDelegate.swift */,
-				45567DBA22EA179B0007CF05 /* ViewController.swift */,
-				45567DBC22EA179B0007CF05 /* Main.storyboard */,
-				45567DC222EA179E0007CF05 /* Assets.xcassets */,
 				45567DC422EA179E0007CF05 /* LaunchScreen.storyboard */,
-				45567DC722EA179E0007CF05 /* Info.plist */,
-				45567DBF22EA179B0007CF05 /* FindYourMechanicalWorkshop.xcdatamodeld */,
+				457C21DD22EB8675001AA9F0 /* Resources */,
+				457C21DC22EB866E001AA9F0 /* Source */,
 			);
 			path = FindYourMechanicalWorkshop;
 			sourceTree = "<group>";
@@ -145,6 +150,93 @@
 			path = FindYourMechanicalWorkshopUITests;
 			sourceTree = "<group>";
 		};
+		457C21DC22EB866E001AA9F0 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				457C21DE22EB87C9001AA9F0 /* Entities */,
+				457C21DF22EB87D1001AA9F0 /* Modules */,
+				457C21E022EB87D6001AA9F0 /* Services */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		457C21DD22EB8675001AA9F0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				45567DC222EA179E0007CF05 /* Assets.xcassets */,
+				45567DC722EA179E0007CF05 /* Info.plist */,
+				45567DBF22EA179B0007CF05 /* FindYourMechanicalWorkshop.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		457C21DE22EB87C9001AA9F0 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		457C21DF22EB87D1001AA9F0 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				457C21E122EB87FB001AA9F0 /* List */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		457C21E022EB87D6001AA9F0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		457C21E122EB87FB001AA9F0 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				457C21E522EB8803001AA9F0 /* WorkshopListProtocols.swift */,
+				457C21F122EB8828001AA9F0 /* Router */,
+				457C21F022EB8822001AA9F0 /* Presenter */,
+				457C21EF22EB881A001AA9F0 /* Interactor */,
+				457C21EE22EB8814001AA9F0 /* View */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		457C21EE22EB8814001AA9F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				457C21E222EB8803001AA9F0 /* WorkshopList.storyboard */,
+				457C21E722EB8803001AA9F0 /* WorkshopListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		457C21EF22EB881A001AA9F0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				457C21E622EB8803001AA9F0 /* WorkshopListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		457C21F022EB8822001AA9F0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				457C21E322EB8803001AA9F0 /* WorkshopListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		457C21F122EB8828001AA9F0 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				457C21E422EB8803001AA9F0 /* WorkshopListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		57B552BA05FDF700B6F4B8CD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +247,6 @@
 				4BAF714E32589E77CEB90CB3 /* Pods-FindYourMechanicalWorkshopUITests.debug.xcconfig */,
 				A937469CDD8E22A218E54FF7 /* Pods-FindYourMechanicalWorkshopUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -280,7 +371,7 @@
 			files = (
 				45567DC622EA179E0007CF05 /* LaunchScreen.storyboard in Resources */,
 				45567DC322EA179E0007CF05 /* Assets.xcassets in Resources */,
-				45567DBE22EA179B0007CF05 /* Main.storyboard in Resources */,
+				457C21E822EB8803001AA9F0 /* WorkshopList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,9 +499,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45567DBB22EA179B0007CF05 /* ViewController.swift in Sources */,
 				45567DC122EA179B0007CF05 /* FindYourMechanicalWorkshop.xcdatamodeld in Sources */,
+				457C21EB22EB8803001AA9F0 /* WorkshopListProtocols.swift in Sources */,
 				45567DB922EA179B0007CF05 /* AppDelegate.swift in Sources */,
+				457C21E922EB8803001AA9F0 /* WorkshopListPresenter.swift in Sources */,
+				457C21ED22EB8803001AA9F0 /* WorkshopListView.swift in Sources */,
+				457C21EA22EB8803001AA9F0 /* WorkshopListRouter.swift in Sources */,
+				457C21EC22EB8803001AA9F0 /* WorkshopListInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,14 +541,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		45567DBC22EA179B0007CF05 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				45567DBD22EA179B0007CF05 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		45567DC422EA179E0007CF05 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -588,7 +675,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQQC38YQ4S;
-				INFOPLIST_FILE = FindYourMechanicalWorkshop/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FindYourMechanicalWorkshop/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -607,7 +694,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQQC38YQ4S;
-				INFOPLIST_FILE = FindYourMechanicalWorkshop/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FindYourMechanicalWorkshop/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
