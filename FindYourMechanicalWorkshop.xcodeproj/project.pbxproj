@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D38116C3D6E45814FD5F06D /* Pods_FindYourMechanicalWorkshopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE442A9DCEC136AB418E2099 /* Pods_FindYourMechanicalWorkshopTests.framework */; };
+		3A6D4CBF0005DB178C99F583 /* Pods_FindYourMechanicalWorkshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B993C094540F24DC61C9124E /* Pods_FindYourMechanicalWorkshop.framework */; };
 		45567DB922EA179B0007CF05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45567DB822EA179B0007CF05 /* AppDelegate.swift */; };
 		45567DBB22EA179B0007CF05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45567DBA22EA179B0007CF05 /* ViewController.swift */; };
 		45567DBE22EA179B0007CF05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45567DBC22EA179B0007CF05 /* Main.storyboard */; };
@@ -15,6 +17,7 @@
 		45567DC622EA179E0007CF05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45567DC422EA179E0007CF05 /* LaunchScreen.storyboard */; };
 		45567DD122EA179E0007CF05 /* FindYourMechanicalWorkshopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45567DD022EA179E0007CF05 /* FindYourMechanicalWorkshopTests.swift */; };
 		45567DDC22EA179F0007CF05 /* FindYourMechanicalWorkshopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45567DDB22EA179F0007CF05 /* FindYourMechanicalWorkshopUITests.swift */; };
+		B1A4F102A932F4A2A7C9202C /* Pods_FindYourMechanicalWorkshopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71CF13A20D16A916809E321D /* Pods_FindYourMechanicalWorkshopUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,15 @@
 		45567DD722EA179E0007CF05 /* FindYourMechanicalWorkshopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindYourMechanicalWorkshopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45567DDB22EA179F0007CF05 /* FindYourMechanicalWorkshopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindYourMechanicalWorkshopUITests.swift; sourceTree = "<group>"; };
 		45567DDD22EA179F0007CF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BAF714E32589E77CEB90CB3 /* Pods-FindYourMechanicalWorkshopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourMechanicalWorkshopUITests.debug.xcconfig"; path = "Target Support Files/Pods-FindYourMechanicalWorkshopUITests/Pods-FindYourMechanicalWorkshopUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		71CF13A20D16A916809E321D /* Pods_FindYourMechanicalWorkshopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindYourMechanicalWorkshopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B29E512DD2019D25D81A367 /* Pods-FindYourMechanicalWorkshopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourMechanicalWorkshopTests.debug.xcconfig"; path = "Target Support Files/Pods-FindYourMechanicalWorkshopTests/Pods-FindYourMechanicalWorkshopTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8CD69A319893C8A3A189D328 /* Pods-FindYourMechanicalWorkshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourMechanicalWorkshop.debug.xcconfig"; path = "Target Support Files/Pods-FindYourMechanicalWorkshop/Pods-FindYourMechanicalWorkshop.debug.xcconfig"; sourceTree = "<group>"; };
+		A937469CDD8E22A218E54FF7 /* Pods-FindYourMechanicalWorkshopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourMechanicalWorkshopUITests.release.xcconfig"; path = "Target Support Files/Pods-FindYourMechanicalWorkshopUITests/Pods-FindYourMechanicalWorkshopUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AE442A9DCEC136AB418E2099 /* Pods_FindYourMechanicalWorkshopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindYourMechanicalWorkshopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B993C094540F24DC61C9124E /* Pods_FindYourMechanicalWorkshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindYourMechanicalWorkshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6E1A2C0C435E8FFAE5CB9F8 /* Pods-FindYourMechanicalWorkshopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourMechanicalWorkshopTests.release.xcconfig"; path = "Target Support Files/Pods-FindYourMechanicalWorkshopTests/Pods-FindYourMechanicalWorkshopTests.release.xcconfig"; sourceTree = "<group>"; };
+		F799ABB94C567ED522E8C56D /* Pods-FindYourMechanicalWorkshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourMechanicalWorkshop.release.xcconfig"; path = "Target Support Files/Pods-FindYourMechanicalWorkshop/Pods-FindYourMechanicalWorkshop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A6D4CBF0005DB178C99F583 /* Pods_FindYourMechanicalWorkshop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D38116C3D6E45814FD5F06D /* Pods_FindYourMechanicalWorkshopTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1A4F102A932F4A2A7C9202C /* Pods_FindYourMechanicalWorkshopUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				45567DCF22EA179E0007CF05 /* FindYourMechanicalWorkshopTests */,
 				45567DDA22EA179E0007CF05 /* FindYourMechanicalWorkshopUITests */,
 				45567DB622EA179B0007CF05 /* Products */,
+				57B552BA05FDF700B6F4B8CD /* Pods */,
+				D8BC844DE1FCD8FE2E88A502 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +145,30 @@
 			path = FindYourMechanicalWorkshopUITests;
 			sourceTree = "<group>";
 		};
+		57B552BA05FDF700B6F4B8CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8CD69A319893C8A3A189D328 /* Pods-FindYourMechanicalWorkshop.debug.xcconfig */,
+				F799ABB94C567ED522E8C56D /* Pods-FindYourMechanicalWorkshop.release.xcconfig */,
+				7B29E512DD2019D25D81A367 /* Pods-FindYourMechanicalWorkshopTests.debug.xcconfig */,
+				D6E1A2C0C435E8FFAE5CB9F8 /* Pods-FindYourMechanicalWorkshopTests.release.xcconfig */,
+				4BAF714E32589E77CEB90CB3 /* Pods-FindYourMechanicalWorkshopUITests.debug.xcconfig */,
+				A937469CDD8E22A218E54FF7 /* Pods-FindYourMechanicalWorkshopUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D8BC844DE1FCD8FE2E88A502 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B993C094540F24DC61C9124E /* Pods_FindYourMechanicalWorkshop.framework */,
+				AE442A9DCEC136AB418E2099 /* Pods_FindYourMechanicalWorkshopTests.framework */,
+				71CF13A20D16A916809E321D /* Pods_FindYourMechanicalWorkshopUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45567DE022EA179F0007CF05 /* Build configuration list for PBXNativeTarget "FindYourMechanicalWorkshop" */;
 			buildPhases = (
+				C1FEEE1FC240307398DFA4DD /* [CP] Check Pods Manifest.lock */,
 				45567DB122EA179B0007CF05 /* Sources */,
 				45567DB222EA179B0007CF05 /* Frameworks */,
 				45567DB322EA179B0007CF05 /* Resources */,
+				08E6ED1A1FA212BDCEC9668F /* [CP] Embed Pods Frameworks */,
+				98664922F47CA840712FE8A7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +196,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45567DE322EA179F0007CF05 /* Build configuration list for PBXNativeTarget "FindYourMechanicalWorkshopTests" */;
 			buildPhases = (
+				5E6623F3BCB1F619A91629DC /* [CP] Check Pods Manifest.lock */,
 				45567DC822EA179E0007CF05 /* Sources */,
 				45567DC922EA179E0007CF05 /* Frameworks */,
 				45567DCA22EA179E0007CF05 /* Resources */,
@@ -170,6 +215,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45567DE622EA179F0007CF05 /* Build configuration list for PBXNativeTarget "FindYourMechanicalWorkshopUITests" */;
 			buildPhases = (
+				0BE43100704301653CB69DF9 /* [CP] Check Pods Manifest.lock */,
 				45567DD322EA179E0007CF05 /* Sources */,
 				45567DD422EA179E0007CF05 /* Frameworks */,
 				45567DD522EA179E0007CF05 /* Resources */,
@@ -253,6 +299,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08E6ED1A1FA212BDCEC9668F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindYourMechanicalWorkshop/Pods-FindYourMechanicalWorkshop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindYourMechanicalWorkshop/Pods-FindYourMechanicalWorkshop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindYourMechanicalWorkshop/Pods-FindYourMechanicalWorkshop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0BE43100704301653CB69DF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindYourMechanicalWorkshopUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E6623F3BCB1F619A91629DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindYourMechanicalWorkshopTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98664922F47CA840712FE8A7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindYourMechanicalWorkshop/Pods-FindYourMechanicalWorkshop-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindYourMechanicalWorkshop/Pods-FindYourMechanicalWorkshop-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindYourMechanicalWorkshop/Pods-FindYourMechanicalWorkshop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1FEEE1FC240307398DFA4DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindYourMechanicalWorkshop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		45567DB122EA179B0007CF05 /* Sources */ = {
@@ -434,6 +583,7 @@
 		};
 		45567DE122EA179F0007CF05 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CD69A319893C8A3A189D328 /* Pods-FindYourMechanicalWorkshop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -452,6 +602,7 @@
 		};
 		45567DE222EA179F0007CF05 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F799ABB94C567ED522E8C56D /* Pods-FindYourMechanicalWorkshop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -470,6 +621,7 @@
 		};
 		45567DE422EA179F0007CF05 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B29E512DD2019D25D81A367 /* Pods-FindYourMechanicalWorkshopTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +643,7 @@
 		};
 		45567DE522EA179F0007CF05 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6E1A2C0C435E8FFAE5CB9F8 /* Pods-FindYourMechanicalWorkshopTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +665,7 @@
 		};
 		45567DE722EA179F0007CF05 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BAF714E32589E77CEB90CB3 /* Pods-FindYourMechanicalWorkshopUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +686,7 @@
 		};
 		45567DE822EA179F0007CF05 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A937469CDD8E22A218E54FF7 /* Pods-FindYourMechanicalWorkshopUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
