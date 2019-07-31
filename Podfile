@@ -4,6 +4,13 @@
 target 'FindYourMechanicalWorkshop' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
+  
+  plugin 'cocoapods-keys', {
+    :project => "FindYourMechanicalWorkshop",
+    :target => "FindYourMechanicalWorkshop",
+    :keys => [
+      "GoogleApiKey"
+    ]}
 
   # Pods for FindYourMechanicalWorkshop
     pod 'Alamofire', '~> 4.8.1'
