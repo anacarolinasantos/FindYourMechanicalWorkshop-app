@@ -6,11 +6,12 @@
 //  Copyright © 2019. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 // MARK: - Router
 protocol WorkshopListRouterProtocol: class {
-
+    func present(with viewController: UIViewController)
+    func presentAsRoot(window: UIWindow)
 }
 
 // MARK: - Interactor

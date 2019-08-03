@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WorkshopListRouterRouter: NSObject, WorkshopListRouterProtocol {
+class WorkshopListRouter: NSObject, WorkshopListRouterProtocol {
 
 	// MARK: - Constants
 	private let storyBoardName = "WorkshopList"
@@ -36,6 +36,14 @@ class WorkshopListRouterRouter: NSObject, WorkshopListRouterProtocol {
 	}
 
     // MARK: - WorkshopListRouterProtocol
+    func present(with viewController: UIViewController) {
+        viewController.present(self.view, animated: true, completion: nil)
+    }
+    
+    func presentAsRoot(window: UIWindow) {
+        let navigation = UINavigationController(rootViewController: self.view)
+        window.rootViewController = navigation
+    }
 
 	// MARK: - Private methods
 	private func viewControllerFromStoryboard() -> WorkshopListView {

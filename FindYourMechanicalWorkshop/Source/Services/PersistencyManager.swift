@@ -13,5 +13,15 @@ final class PersistencyManager {
     // MARK: - Initializer
     
     // MARK: - Public Methods
+    func getFavoritesWorkshops() {
+        
+    }
     
+    func markAsFavorite(workshop: Workshop) {
+        
+    }
+    
+    func unmarkAsFavorite(workshop: Workshop) {
+        
+    }
 }

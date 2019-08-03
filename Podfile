@@ -10,10 +10,11 @@ target 'FindYourMechanicalWorkshop' do
     :target => "FindYourMechanicalWorkshop",
     :keys => [
       "GoogleApiKey"
-    ]}
+    ]
+  }
 
   # Pods for FindYourMechanicalWorkshop
-    pod 'Alamofire', '~> 4.8.1'
+    pod 'Moya', '~> 13.0'
     pod 'GooglePlaces', '~> 3.2.0'
     pod 'GoogleMaps', '~> 3.2.0'
 
