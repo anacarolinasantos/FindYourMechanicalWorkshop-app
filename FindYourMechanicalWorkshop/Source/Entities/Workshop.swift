@@ -10,25 +10,32 @@ import Foundation
 
 struct Workshop: Decodable {
     
-    let geometry : Location //a
-    let name : String
-//    let openingHours : OpenNow? //b
-//    let photos : [PhotoInfo] //c
-    let address : String
+    let placeId: String
+    let geometry: Location
+    let name: String
+    let photos: [PhotoInfo]?
+    let address: String
+    let rating: Double?
+    let priceLevel: Int?
     
     enum CodingKeys : String, CodingKey {
         case geometry = "geometry"
         case name = "name"
-//        case openingHours = "opening_hours" //d
-//        case photos = "photos"
         case address = "vicinity"
+        case placeId = "place_id"
+        case priceLevel = "price_level"
+        case rating
+        case photos
     }
     
     init(from decoder:Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        geometry = try values.decode(Location.self, forKey: CodingKeys.geometry)
-        name = try values.decode(String.self, forKey: CodingKeys.name)
-        address = try values.decode(String.self, forKey: CodingKeys.address)
+        geometry = try values.decode(Location.self, forKey: .geometry)
+        name = try values.decode(String.self, forKey: .name)
+        address = try values.decode(String.self, forKey: .address)
+        placeId = try values.decode(String.self, forKey: .placeId)
+        photos = try? values.decode([PhotoInfo].self, forKey: .photos)
+        rating = try? values.decode(Double.self, forKey: .rating)
+        priceLevel = try? values.decode(Int.self, forKey: .priceLevel)
     }
-    
 }

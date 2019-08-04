@@ -19,6 +19,7 @@
 		454B781222F72D1C001A4440 /* WorkshopDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B780C22F72D1C001A4440 /* WorkshopDetailProtocols.swift */; };
 		454B781322F72D1C001A4440 /* WorkshopDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B780D22F72D1C001A4440 /* WorkshopDetailInteractor.swift */; };
 		454B781422F72D1C001A4440 /* WorkshopDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B780E22F72D1C001A4440 /* WorkshopDetailView.swift */; };
+		454B781A22F76470001A4440 /* PhotoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B781922F76470001A4440 /* PhotoInfo.swift */; };
 		4553085922F6204700E56289 /* DecodableResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4553085822F6204700E56289 /* DecodableResponses.swift */; };
 		4553085B22F6235200E56289 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4553085A22F6235200E56289 /* Location.swift */; };
 		45567DB922EA179B0007CF05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45567DB822EA179B0007CF05 /* AppDelegate.swift */; };
@@ -65,6 +66,7 @@
 		454B780C22F72D1C001A4440 /* WorkshopDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopDetailProtocols.swift; sourceTree = "<group>"; };
 		454B780D22F72D1C001A4440 /* WorkshopDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopDetailInteractor.swift; sourceTree = "<group>"; };
 		454B780E22F72D1C001A4440 /* WorkshopDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopDetailView.swift; sourceTree = "<group>"; };
+		454B781922F76470001A4440 /* PhotoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfo.swift; sourceTree = "<group>"; };
 		4553085822F6204700E56289 /* DecodableResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableResponses.swift; sourceTree = "<group>"; };
 		4553085A22F6235200E56289 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		45567DB522EA179B0007CF05 /* FindYourMechanicalWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindYourMechanicalWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,6 +238,7 @@
 				4526EF7222F3ADBA00BD4493 /* Workshop.swift */,
 				4553085A22F6235200E56289 /* Location.swift */,
 				4553085822F6204700E56289 /* DecodableResponses.swift */,
+				454B781922F76470001A4440 /* PhotoInfo.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 				4526EF7322F3ADBA00BD4493 /* Workshop.swift in Sources */,
 				457C21EB22EB8803001AA9F0 /* WorkshopListProtocols.swift in Sources */,
 				45567DB922EA179B0007CF05 /* AppDelegate.swift in Sources */,
+				454B781A22F76470001A4440 /* PhotoInfo.swift in Sources */,
 				457C21E922EB8803001AA9F0 /* WorkshopListPresenter.swift in Sources */,
 				4526EF7122F2205300BD4493 /* PersistencyManager.swift in Sources */,
 				454B781322F72D1C001A4440 /* WorkshopDetailInteractor.swift in Sources */,

@@ -60,9 +60,7 @@ class WorkshopListView: UIViewController, WorkshopListPresenterOutputProtocol, U
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as CarWorkshopTableViewCell
         
-        let workshop = presenter.item(at: indexPath.row)
-        
-        cell.carWorkshopNameLabel.text = workshop.name
+        cell.setup(with: presenter.item(at: indexPath.row))
         
         return cell
     }
