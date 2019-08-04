@@ -15,19 +15,22 @@ protocol WorkshopDetailRouterProtocol: class {
 
 // MARK: - Interactor
 protocol WorkshopDetailInteractorInputProtocol {
-
+    func fetchCarWorkshopDetail(with id: String)
 }
 
 // MARK: - Presenter
 protocol WorkshopDetailPresenterInputProtocol: class {
-
+    func viewDidLoad()
 }
 
 protocol WorkshopDetailInteractorOutputProtocol: class {
-
+    func handleSuccess(with result: Workshop)
+    func handleFailure(with message: String)
 }
 
 // MARK: - View
 protocol WorkshopDetailPresenterOutputProtocol: class {
-
+    func showLoading(_ loading: Bool)
+    func showError(message: String)
+    func reloadData()
 }

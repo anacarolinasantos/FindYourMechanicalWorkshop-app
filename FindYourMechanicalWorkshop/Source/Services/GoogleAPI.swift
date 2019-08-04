@@ -21,6 +21,7 @@ enum GoogleAPI: TargetType {
     // MARK: - Google API Cases
     
     case findPlacesNear(location: Location, type: String?)
+    case findDetail(id: String)
     
     // MARK: - Moya Target Type Properties
     
@@ -31,12 +32,14 @@ enum GoogleAPI: TargetType {
     var path: String {
         switch self {
         case .findPlacesNear(_, _): return "nearbysearch/json"
+        case .findDetail(_): return "details/json"
         }
     }
     
     var method: Moya.Method {
         switch self {
         case .findPlacesNear(_, _): return .get
+        case .findDetail(_): return .get
         }
     }
     
@@ -59,12 +62,20 @@ enum GoogleAPI: TargetType {
                 return params
             }
             return params
+        case .findDetail(let id):
+            var params: [String : Any] = [
+                "placeid":"\(id)"
+            ]
+            params.merge(authParams){(current, _) in current}
+            return params
         }
     }
     
     var task: Task {
         switch self {
         case .findPlacesNear(_, _):
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
+        case .findDetail(_):
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         }
         

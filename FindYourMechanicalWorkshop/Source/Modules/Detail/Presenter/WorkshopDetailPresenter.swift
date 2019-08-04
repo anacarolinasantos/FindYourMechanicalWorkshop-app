@@ -16,8 +16,19 @@ class WorkshopDetailPresenter: NSObject, WorkshopDetailPresenterInputProtocol, W
     var router: WorkshopDetailRouterProtocol!
 
     // MARK: - WorkshopDetailPresenterInputProtocol
+    func viewDidLoad() {
+        
+    }
 
     // MARK: - WorkshopDetailPresenterInteractorOutputProtocol
+    func handleSuccess(with result: Workshop) {
+        
+    }
+    
+    func handleFailure(with message: String) {
+        
+    }
+    
 
 	// MARK: - Private Methods
 

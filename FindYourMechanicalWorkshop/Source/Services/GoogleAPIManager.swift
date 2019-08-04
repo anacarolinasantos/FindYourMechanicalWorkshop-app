@@ -27,6 +27,26 @@ final class GoogleAPIManager {
     }
     
     // MARK: - Private Methods
+    private func requestObject<T: Decodable>(_ token: GoogleAPI,
+                                            completion: @escaping (T?, MoyaError?) -> Void) {
+        
+        provider.request(token) { result in
+            switch result {
+            case .success(let response):
+                do{
+                    // FIXME: Check status code to handle error
+                    let t = try response.map(GooglePlaceResult<T>.self).result
+                    completion(t, nil)
+                } catch let error {
+                    // FIXME: handle error
+                    completion(nil, error as? MoyaError)
+                }
+            case .failure(let error):
+                // FIXME: handle error
+                completion(nil, error)
+            }
+        }
+    }
     
     private func requestArray<T: Decodable>(_ token: GoogleAPI,
                       completion: @escaping ([T]?, MoyaError?) -> Void) {
@@ -53,5 +73,9 @@ final class GoogleAPIManager {
     func getPlacesNear(location: Location, type: String?, completion: @escaping ([Workshop]?, MoyaError?) -> Void) {
         requestArray(.findPlacesNear(location: location, type: type),
                      completion: completion)
+    }
+    
+    func getPlaceDetail(with id: String, completion: @escaping (Workshop?, MoyaError?) -> Void) {
+        requestObject(.findDetail(id: id), completion: completion)
     }
 }

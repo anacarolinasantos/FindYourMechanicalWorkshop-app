@@ -11,3 +11,7 @@ import Foundation
 struct GooglePlaceResults<T: Decodable>: Decodable {
     let results: [T]
 }
+
+struct GooglePlaceResult<T: Decodable>: Decodable {
+    let result: T
+}

@@ -19,6 +19,17 @@ class WorkshopDetailView: UIViewController, WorkshopDetailPresenterOutputProtoco
     }
 
     // MARK: - WorkshopDetailPresenterOutputProtocol
+    func showLoading(_ loading: Bool) {
+        
+    }
+    
+    func showError(message: String) {
+        
+    }
+    
+    func reloadData() {
+        
+    }
 
 	// MARK: - Private Methods
 
