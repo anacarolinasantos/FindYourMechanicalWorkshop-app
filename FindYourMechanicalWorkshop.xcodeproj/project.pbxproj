@@ -13,6 +13,12 @@
 		4526EF7122F2205300BD4493 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4526EF7022F2205300BD4493 /* PersistencyManager.swift */; };
 		4526EF7322F3ADBA00BD4493 /* Workshop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4526EF7222F3ADBA00BD4493 /* Workshop.swift */; };
 		453F99B022F5FEF20037E57D /* GoogleAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453F99AF22F5FEF20037E57D /* GoogleAPIManager.swift */; };
+		454B780F22F72D1C001A4440 /* WorkshopDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 454B780922F72D1C001A4440 /* WorkshopDetail.storyboard */; };
+		454B781022F72D1C001A4440 /* WorkshopDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B780A22F72D1C001A4440 /* WorkshopDetailPresenter.swift */; };
+		454B781122F72D1C001A4440 /* WorkshopDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B780B22F72D1C001A4440 /* WorkshopDetailRouter.swift */; };
+		454B781222F72D1C001A4440 /* WorkshopDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B780C22F72D1C001A4440 /* WorkshopDetailProtocols.swift */; };
+		454B781322F72D1C001A4440 /* WorkshopDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B780D22F72D1C001A4440 /* WorkshopDetailInteractor.swift */; };
+		454B781422F72D1C001A4440 /* WorkshopDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B780E22F72D1C001A4440 /* WorkshopDetailView.swift */; };
 		4553085922F6204700E56289 /* DecodableResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4553085822F6204700E56289 /* DecodableResponses.swift */; };
 		4553085B22F6235200E56289 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4553085A22F6235200E56289 /* Location.swift */; };
 		45567DB922EA179B0007CF05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45567DB822EA179B0007CF05 /* AppDelegate.swift */; };
@@ -53,6 +59,12 @@
 		4526EF7022F2205300BD4493 /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		4526EF7222F3ADBA00BD4493 /* Workshop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workshop.swift; sourceTree = "<group>"; };
 		453F99AF22F5FEF20037E57D /* GoogleAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAPIManager.swift; sourceTree = "<group>"; };
+		454B780922F72D1C001A4440 /* WorkshopDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkshopDetail.storyboard; sourceTree = "<group>"; };
+		454B780A22F72D1C001A4440 /* WorkshopDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopDetailPresenter.swift; sourceTree = "<group>"; };
+		454B780B22F72D1C001A4440 /* WorkshopDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopDetailRouter.swift; sourceTree = "<group>"; };
+		454B780C22F72D1C001A4440 /* WorkshopDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopDetailProtocols.swift; sourceTree = "<group>"; };
+		454B780D22F72D1C001A4440 /* WorkshopDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopDetailInteractor.swift; sourceTree = "<group>"; };
+		454B780E22F72D1C001A4440 /* WorkshopDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopDetailView.swift; sourceTree = "<group>"; };
 		4553085822F6204700E56289 /* DecodableResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableResponses.swift; sourceTree = "<group>"; };
 		4553085A22F6235200E56289 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		45567DB522EA179B0007CF05 /* FindYourMechanicalWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindYourMechanicalWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +125,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		454B781522F72D22001A4440 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				454B780922F72D1C001A4440 /* WorkshopDetail.storyboard */,
+				454B780E22F72D1C001A4440 /* WorkshopDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		454B781622F72D25001A4440 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				454B780D22F72D1C001A4440 /* WorkshopDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		454B781722F72D2A001A4440 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				454B780A22F72D1C001A4440 /* WorkshopDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		454B781822F72D2F001A4440 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				454B780B22F72D1C001A4440 /* WorkshopDetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		45567DAC22EA179B0007CF05 = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +243,7 @@
 		457C21DF22EB87D1001AA9F0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				45C72E0A22F72BDE00F167A4 /* Detail */,
 				457C21E122EB87FB001AA9F0 /* List */,
 			);
 			path = Modules;
@@ -272,6 +318,18 @@
 			children = (
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		45C72E0A22F72BDE00F167A4 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				454B780C22F72D1C001A4440 /* WorkshopDetailProtocols.swift */,
+				454B781822F72D2F001A4440 /* Router */,
+				454B781722F72D2A001A4440 /* Presenter */,
+				454B781622F72D25001A4440 /* Interactor */,
+				454B781522F72D22001A4440 /* View */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		57B552BA05FDF700B6F4B8CD /* Pods */ = {
@@ -406,6 +464,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				454B780F22F72D1C001A4440 /* WorkshopDetail.storyboard in Resources */,
 				45567DC622EA179E0007CF05 /* LaunchScreen.storyboard in Resources */,
 				45567DC322EA179E0007CF05 /* Assets.xcassets in Resources */,
 				457C21E822EB8803001AA9F0 /* WorkshopList.storyboard in Resources */,
@@ -542,13 +601,18 @@
 				45567DB922EA179B0007CF05 /* AppDelegate.swift in Sources */,
 				457C21E922EB8803001AA9F0 /* WorkshopListPresenter.swift in Sources */,
 				4526EF7122F2205300BD4493 /* PersistencyManager.swift in Sources */,
+				454B781322F72D1C001A4440 /* WorkshopDetailInteractor.swift in Sources */,
+				454B781122F72D1C001A4440 /* WorkshopDetailRouter.swift in Sources */,
+				454B781022F72D1C001A4440 /* WorkshopDetailPresenter.swift in Sources */,
 				4553085B22F6235200E56289 /* Location.swift in Sources */,
+				454B781422F72D1C001A4440 /* WorkshopDetailView.swift in Sources */,
 				457C21ED22EB8803001AA9F0 /* WorkshopListView.swift in Sources */,
 				457C21EA22EB8803001AA9F0 /* WorkshopListRouter.swift in Sources */,
 				453F99B022F5FEF20037E57D /* GoogleAPIManager.swift in Sources */,
 				4553085922F6204700E56289 /* DecodableResponses.swift in Sources */,
 				45C72E0322F6348000F167A4 /* CarWorkshopTableViewCell.swift in Sources */,
 				4526EF6D22F2202B00BD4493 /* GoogleAPI.swift in Sources */,
+				454B781222F72D1C001A4440 /* WorkshopDetailProtocols.swift in Sources */,
 				457C21EC22EB8803001AA9F0 /* WorkshopListInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
