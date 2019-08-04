@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D38116C3D6E45814FD5F06D /* Pods_FindYourMechanicalWorkshopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE442A9DCEC136AB418E2099 /* Pods_FindYourMechanicalWorkshopTests.framework */; };
-		3A6D4CBF0005DB178C99F583 /* Pods_FindYourMechanicalWorkshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B993C094540F24DC61C9124E /* Pods_FindYourMechanicalWorkshop.framework */; };
+		22868AC9FA9DDBB496F756AD /* Pods_FindYourCarWorkshopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0BFCD0492B3F057ECA3BA2 /* Pods_FindYourCarWorkshopUITests.framework */; };
 		4526EF6D22F2202B00BD4493 /* GoogleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4526EF6C22F2202B00BD4493 /* GoogleAPI.swift */; };
 		4526EF7122F2205300BD4493 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4526EF7022F2205300BD4493 /* PersistencyManager.swift */; };
 		4526EF7322F3ADBA00BD4493 /* Workshop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4526EF7222F3ADBA00BD4493 /* Workshop.swift */; };
@@ -23,7 +22,6 @@
 		4553085922F6204700E56289 /* DecodableResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4553085822F6204700E56289 /* DecodableResponses.swift */; };
 		4553085B22F6235200E56289 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4553085A22F6235200E56289 /* Location.swift */; };
 		45567DB922EA179B0007CF05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45567DB822EA179B0007CF05 /* AppDelegate.swift */; };
-		45567DC122EA179B0007CF05 /* FindYourMechanicalWorkshop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45567DBF22EA179B0007CF05 /* FindYourMechanicalWorkshop.xcdatamodeld */; };
 		45567DC322EA179E0007CF05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45567DC222EA179E0007CF05 /* Assets.xcassets */; };
 		45567DC622EA179E0007CF05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45567DC422EA179E0007CF05 /* LaunchScreen.storyboard */; };
 		45567DD122EA179E0007CF05 /* FindYourMechanicalWorkshopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45567DD022EA179E0007CF05 /* FindYourMechanicalWorkshopTests.swift */; };
@@ -35,7 +33,8 @@
 		457C21EC22EB8803001AA9F0 /* WorkshopListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C21E622EB8803001AA9F0 /* WorkshopListInteractor.swift */; };
 		457C21ED22EB8803001AA9F0 /* WorkshopListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C21E722EB8803001AA9F0 /* WorkshopListView.swift */; };
 		45C72E0322F6348000F167A4 /* CarWorkshopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C72E0122F6348000F167A4 /* CarWorkshopTableViewCell.swift */; };
-		B1A4F102A932F4A2A7C9202C /* Pods_FindYourMechanicalWorkshopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71CF13A20D16A916809E321D /* Pods_FindYourMechanicalWorkshopUITests.framework */; };
+		9222AA976E0965D367A52099 /* Pods_FindYourCarWorkshopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57B9D6FEC7AF2AD662770D86 /* Pods_FindYourCarWorkshopTests.framework */; };
+		E4EA4AA1B4429FC444D79941 /* Pods_FindYourCarWorkshop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8237637935762D3472232AB /* Pods_FindYourCarWorkshop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D7342D1C00D161E1F1B89EB /* Pods-FindYourCarWorkshopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourCarWorkshopTests.release.xcconfig"; path = "Target Support Files/Pods-FindYourCarWorkshopTests/Pods-FindYourCarWorkshopTests.release.xcconfig"; sourceTree = "<group>"; };
+		348670B96AD4CD5D8EEA80D6 /* Pods-FindYourCarWorkshopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourCarWorkshopUITests.release.xcconfig"; path = "Target Support Files/Pods-FindYourCarWorkshopUITests/Pods-FindYourCarWorkshopUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4526EF6C22F2202B00BD4493 /* GoogleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAPI.swift; sourceTree = "<group>"; };
 		4526EF7022F2205300BD4493 /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		4526EF7222F3ADBA00BD4493 /* Workshop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workshop.swift; sourceTree = "<group>"; };
@@ -69,16 +70,15 @@
 		454B781922F76470001A4440 /* PhotoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfo.swift; sourceTree = "<group>"; };
 		4553085822F6204700E56289 /* DecodableResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableResponses.swift; sourceTree = "<group>"; };
 		4553085A22F6235200E56289 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		45567DB522EA179B0007CF05 /* FindYourMechanicalWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindYourMechanicalWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45567DB522EA179B0007CF05 /* FindYourCarWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindYourCarWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45567DB822EA179B0007CF05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		45567DC022EA179B0007CF05 /* FindYourMechanicalWorkshop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FindYourMechanicalWorkshop.xcdatamodel; sourceTree = "<group>"; };
 		45567DC222EA179E0007CF05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45567DC522EA179E0007CF05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45567DC722EA179E0007CF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45567DCC22EA179E0007CF05 /* FindYourMechanicalWorkshopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindYourMechanicalWorkshopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45567DCC22EA179E0007CF05 /* FindYourCarWorkshopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindYourCarWorkshopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45567DD022EA179E0007CF05 /* FindYourMechanicalWorkshopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindYourMechanicalWorkshopTests.swift; sourceTree = "<group>"; };
 		45567DD222EA179E0007CF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45567DD722EA179E0007CF05 /* FindYourMechanicalWorkshopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindYourMechanicalWorkshopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45567DD722EA179E0007CF05 /* FindYourCarWorkshopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindYourCarWorkshopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45567DDB22EA179F0007CF05 /* FindYourMechanicalWorkshopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindYourMechanicalWorkshopUITests.swift; sourceTree = "<group>"; };
 		45567DDD22EA179F0007CF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		457C21E222EB8803001AA9F0 /* WorkshopList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkshopList.storyboard; sourceTree = "<group>"; };
@@ -89,13 +89,17 @@
 		457C21E722EB8803001AA9F0 /* WorkshopListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopListView.swift; sourceTree = "<group>"; };
 		45C72E0122F6348000F167A4 /* CarWorkshopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarWorkshopTableViewCell.swift; sourceTree = "<group>"; };
 		4BAF714E32589E77CEB90CB3 /* Pods-FindYourMechanicalWorkshopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourMechanicalWorkshopUITests.debug.xcconfig"; path = "Target Support Files/Pods-FindYourMechanicalWorkshopUITests/Pods-FindYourMechanicalWorkshopUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		71CF13A20D16A916809E321D /* Pods_FindYourMechanicalWorkshopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindYourMechanicalWorkshopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		565F962111F602CCDF3E4E59 /* Pods-FindYourCarWorkshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourCarWorkshop.debug.xcconfig"; path = "Target Support Files/Pods-FindYourCarWorkshop/Pods-FindYourCarWorkshop.debug.xcconfig"; sourceTree = "<group>"; };
+		57B9D6FEC7AF2AD662770D86 /* Pods_FindYourCarWorkshopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindYourCarWorkshopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B6694F9A55062A5A48DF845 /* Pods-FindYourCarWorkshopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourCarWorkshopUITests.debug.xcconfig"; path = "Target Support Files/Pods-FindYourCarWorkshopUITests/Pods-FindYourCarWorkshopUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B29E512DD2019D25D81A367 /* Pods-FindYourMechanicalWorkshopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourMechanicalWorkshopTests.debug.xcconfig"; path = "Target Support Files/Pods-FindYourMechanicalWorkshopTests/Pods-FindYourMechanicalWorkshopTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A0BFCD0492B3F057ECA3BA2 /* Pods_FindYourCarWorkshopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindYourCarWorkshopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD69A319893C8A3A189D328 /* Pods-FindYourMechanicalWorkshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourMechanicalWorkshop.debug.xcconfig"; path = "Target Support Files/Pods-FindYourMechanicalWorkshop/Pods-FindYourMechanicalWorkshop.debug.xcconfig"; sourceTree = "<group>"; };
 		A937469CDD8E22A218E54FF7 /* Pods-FindYourMechanicalWorkshopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourMechanicalWorkshopUITests.release.xcconfig"; path = "Target Support Files/Pods-FindYourMechanicalWorkshopUITests/Pods-FindYourMechanicalWorkshopUITests.release.xcconfig"; sourceTree = "<group>"; };
-		AE442A9DCEC136AB418E2099 /* Pods_FindYourMechanicalWorkshopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindYourMechanicalWorkshopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B993C094540F24DC61C9124E /* Pods_FindYourMechanicalWorkshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindYourMechanicalWorkshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC966792B6561432F58ED4EB /* Pods-FindYourCarWorkshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourCarWorkshop.release.xcconfig"; path = "Target Support Files/Pods-FindYourCarWorkshop/Pods-FindYourCarWorkshop.release.xcconfig"; sourceTree = "<group>"; };
+		C8237637935762D3472232AB /* Pods_FindYourCarWorkshop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindYourCarWorkshop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E1A2C0C435E8FFAE5CB9F8 /* Pods-FindYourMechanicalWorkshopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourMechanicalWorkshopTests.release.xcconfig"; path = "Target Support Files/Pods-FindYourMechanicalWorkshopTests/Pods-FindYourMechanicalWorkshopTests.release.xcconfig"; sourceTree = "<group>"; };
+		E8C7E96750F567ABABDDB1A0 /* Pods-FindYourCarWorkshopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourCarWorkshopTests.debug.xcconfig"; path = "Target Support Files/Pods-FindYourCarWorkshopTests/Pods-FindYourCarWorkshopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F799ABB94C567ED522E8C56D /* Pods-FindYourMechanicalWorkshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourMechanicalWorkshop.release.xcconfig"; path = "Target Support Files/Pods-FindYourMechanicalWorkshop/Pods-FindYourMechanicalWorkshop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A6D4CBF0005DB178C99F583 /* Pods_FindYourMechanicalWorkshop.framework in Frameworks */,
+				E4EA4AA1B4429FC444D79941 /* Pods_FindYourCarWorkshop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D38116C3D6E45814FD5F06D /* Pods_FindYourMechanicalWorkshopTests.framework in Frameworks */,
+				9222AA976E0965D367A52099 /* Pods_FindYourCarWorkshopTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1A4F102A932F4A2A7C9202C /* Pods_FindYourMechanicalWorkshopUITests.framework in Frameworks */,
+				22868AC9FA9DDBB496F756AD /* Pods_FindYourCarWorkshopUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,9 +167,9 @@
 		45567DAC22EA179B0007CF05 = {
 			isa = PBXGroup;
 			children = (
-				45567DB722EA179B0007CF05 /* FindYourMechanicalWorkshop */,
-				45567DCF22EA179E0007CF05 /* FindYourMechanicalWorkshopTests */,
-				45567DDA22EA179E0007CF05 /* FindYourMechanicalWorkshopUITests */,
+				45567DB722EA179B0007CF05 /* FindYourCarWorkshop */,
+				45567DCF22EA179E0007CF05 /* FindYourCarWorkshopTests */,
+				45567DDA22EA179E0007CF05 /* FindYourCarWorkshopUITests */,
 				45567DB622EA179B0007CF05 /* Products */,
 				57B552BA05FDF700B6F4B8CD /* Pods */,
 				D8BC844DE1FCD8FE2E88A502 /* Frameworks */,
@@ -175,14 +179,14 @@
 		45567DB622EA179B0007CF05 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				45567DB522EA179B0007CF05 /* FindYourMechanicalWorkshop.app */,
-				45567DCC22EA179E0007CF05 /* FindYourMechanicalWorkshopTests.xctest */,
-				45567DD722EA179E0007CF05 /* FindYourMechanicalWorkshopUITests.xctest */,
+				45567DB522EA179B0007CF05 /* FindYourCarWorkshop.app */,
+				45567DCC22EA179E0007CF05 /* FindYourCarWorkshopTests.xctest */,
+				45567DD722EA179E0007CF05 /* FindYourCarWorkshopUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		45567DB722EA179B0007CF05 /* FindYourMechanicalWorkshop */ = {
+		45567DB722EA179B0007CF05 /* FindYourCarWorkshop */ = {
 			isa = PBXGroup;
 			children = (
 				45567DB822EA179B0007CF05 /* AppDelegate.swift */,
@@ -190,25 +194,25 @@
 				457C21DD22EB8675001AA9F0 /* Resources */,
 				457C21DC22EB866E001AA9F0 /* Source */,
 			);
-			path = FindYourMechanicalWorkshop;
+			path = FindYourCarWorkshop;
 			sourceTree = "<group>";
 		};
-		45567DCF22EA179E0007CF05 /* FindYourMechanicalWorkshopTests */ = {
+		45567DCF22EA179E0007CF05 /* FindYourCarWorkshopTests */ = {
 			isa = PBXGroup;
 			children = (
 				45567DD022EA179E0007CF05 /* FindYourMechanicalWorkshopTests.swift */,
 				45567DD222EA179E0007CF05 /* Info.plist */,
 			);
-			path = FindYourMechanicalWorkshopTests;
+			path = FindYourCarWorkshopTests;
 			sourceTree = "<group>";
 		};
-		45567DDA22EA179E0007CF05 /* FindYourMechanicalWorkshopUITests */ = {
+		45567DDA22EA179E0007CF05 /* FindYourCarWorkshopUITests */ = {
 			isa = PBXGroup;
 			children = (
 				45567DDB22EA179F0007CF05 /* FindYourMechanicalWorkshopUITests.swift */,
 				45567DDD22EA179F0007CF05 /* Info.plist */,
 			);
-			path = FindYourMechanicalWorkshopUITests;
+			path = FindYourCarWorkshopUITests;
 			sourceTree = "<group>";
 		};
 		457C21DC22EB866E001AA9F0 /* Source */ = {
@@ -227,7 +231,6 @@
 			children = (
 				45567DC222EA179E0007CF05 /* Assets.xcassets */,
 				45567DC722EA179E0007CF05 /* Info.plist */,
-				45567DBF22EA179B0007CF05 /* FindYourMechanicalWorkshop.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -344,6 +347,12 @@
 				D6E1A2C0C435E8FFAE5CB9F8 /* Pods-FindYourMechanicalWorkshopTests.release.xcconfig */,
 				4BAF714E32589E77CEB90CB3 /* Pods-FindYourMechanicalWorkshopUITests.debug.xcconfig */,
 				A937469CDD8E22A218E54FF7 /* Pods-FindYourMechanicalWorkshopUITests.release.xcconfig */,
+				565F962111F602CCDF3E4E59 /* Pods-FindYourCarWorkshop.debug.xcconfig */,
+				AC966792B6561432F58ED4EB /* Pods-FindYourCarWorkshop.release.xcconfig */,
+				E8C7E96750F567ABABDDB1A0 /* Pods-FindYourCarWorkshopTests.debug.xcconfig */,
+				2D7342D1C00D161E1F1B89EB /* Pods-FindYourCarWorkshopTests.release.xcconfig */,
+				6B6694F9A55062A5A48DF845 /* Pods-FindYourCarWorkshopUITests.debug.xcconfig */,
+				348670B96AD4CD5D8EEA80D6 /* Pods-FindYourCarWorkshopUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -351,9 +360,9 @@
 		D8BC844DE1FCD8FE2E88A502 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B993C094540F24DC61C9124E /* Pods_FindYourMechanicalWorkshop.framework */,
-				AE442A9DCEC136AB418E2099 /* Pods_FindYourMechanicalWorkshopTests.framework */,
-				71CF13A20D16A916809E321D /* Pods_FindYourMechanicalWorkshopUITests.framework */,
+				C8237637935762D3472232AB /* Pods_FindYourCarWorkshop.framework */,
+				57B9D6FEC7AF2AD662770D86 /* Pods_FindYourCarWorkshopTests.framework */,
+				8A0BFCD0492B3F057ECA3BA2 /* Pods_FindYourCarWorkshopUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -361,9 +370,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		45567DB422EA179B0007CF05 /* FindYourMechanicalWorkshop */ = {
+		45567DB422EA179B0007CF05 /* FindYourCarWorkshop */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 45567DE022EA179F0007CF05 /* Build configuration list for PBXNativeTarget "FindYourMechanicalWorkshop" */;
+			buildConfigurationList = 45567DE022EA179F0007CF05 /* Build configuration list for PBXNativeTarget "FindYourCarWorkshop" */;
 			buildPhases = (
 				C1FEEE1FC240307398DFA4DD /* [CP] Check Pods Manifest.lock */,
 				45567DB122EA179B0007CF05 /* Sources */,
@@ -376,14 +385,14 @@
 			);
 			dependencies = (
 			);
-			name = FindYourMechanicalWorkshop;
+			name = FindYourCarWorkshop;
 			productName = FindYourMechanicalWorkshop;
-			productReference = 45567DB522EA179B0007CF05 /* FindYourMechanicalWorkshop.app */;
+			productReference = 45567DB522EA179B0007CF05 /* FindYourCarWorkshop.app */;
 			productType = "com.apple.product-type.application";
 		};
-		45567DCB22EA179E0007CF05 /* FindYourMechanicalWorkshopTests */ = {
+		45567DCB22EA179E0007CF05 /* FindYourCarWorkshopTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 45567DE322EA179F0007CF05 /* Build configuration list for PBXNativeTarget "FindYourMechanicalWorkshopTests" */;
+			buildConfigurationList = 45567DE322EA179F0007CF05 /* Build configuration list for PBXNativeTarget "FindYourCarWorkshopTests" */;
 			buildPhases = (
 				5E6623F3BCB1F619A91629DC /* [CP] Check Pods Manifest.lock */,
 				45567DC822EA179E0007CF05 /* Sources */,
@@ -395,14 +404,14 @@
 			dependencies = (
 				45567DCE22EA179E0007CF05 /* PBXTargetDependency */,
 			);
-			name = FindYourMechanicalWorkshopTests;
+			name = FindYourCarWorkshopTests;
 			productName = FindYourMechanicalWorkshopTests;
-			productReference = 45567DCC22EA179E0007CF05 /* FindYourMechanicalWorkshopTests.xctest */;
+			productReference = 45567DCC22EA179E0007CF05 /* FindYourCarWorkshopTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		45567DD622EA179E0007CF05 /* FindYourMechanicalWorkshopUITests */ = {
+		45567DD622EA179E0007CF05 /* FindYourCarWorkshopUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 45567DE622EA179F0007CF05 /* Build configuration list for PBXNativeTarget "FindYourMechanicalWorkshopUITests" */;
+			buildConfigurationList = 45567DE622EA179F0007CF05 /* Build configuration list for PBXNativeTarget "FindYourCarWorkshopUITests" */;
 			buildPhases = (
 				0BE43100704301653CB69DF9 /* [CP] Check Pods Manifest.lock */,
 				45567DD322EA179E0007CF05 /* Sources */,
@@ -414,9 +423,9 @@
 			dependencies = (
 				45567DD922EA179E0007CF05 /* PBXTargetDependency */,
 			);
-			name = FindYourMechanicalWorkshopUITests;
+			name = FindYourCarWorkshopUITests;
 			productName = FindYourMechanicalWorkshopUITests;
-			productReference = 45567DD722EA179E0007CF05 /* FindYourMechanicalWorkshopUITests.xctest */;
+			productReference = 45567DD722EA179E0007CF05 /* FindYourCarWorkshopUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -442,7 +451,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 45567DB022EA179B0007CF05 /* Build configuration list for PBXProject "FindYourMechanicalWorkshop" */;
+			buildConfigurationList = 45567DB022EA179B0007CF05 /* Build configuration list for PBXProject "FindYourCarWorkshop" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -455,9 +464,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				45567DB422EA179B0007CF05 /* FindYourMechanicalWorkshop */,
-				45567DCB22EA179E0007CF05 /* FindYourMechanicalWorkshopTests */,
-				45567DD622EA179E0007CF05 /* FindYourMechanicalWorkshopUITests */,
+				45567DB422EA179B0007CF05 /* FindYourCarWorkshop */,
+				45567DCB22EA179E0007CF05 /* FindYourCarWorkshopTests */,
+				45567DD622EA179E0007CF05 /* FindYourCarWorkshopUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -497,15 +506,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FindYourMechanicalWorkshop/Pods-FindYourMechanicalWorkshop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FindYourCarWorkshop/Pods-FindYourCarWorkshop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FindYourMechanicalWorkshop/Pods-FindYourMechanicalWorkshop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FindYourCarWorkshop/Pods-FindYourCarWorkshop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindYourMechanicalWorkshop/Pods-FindYourMechanicalWorkshop-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindYourCarWorkshop/Pods-FindYourCarWorkshop-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		0BE43100704301653CB69DF9 /* [CP] Check Pods Manifest.lock */ = {
@@ -523,7 +532,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FindYourMechanicalWorkshopUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FindYourCarWorkshopUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -545,7 +554,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FindYourMechanicalWorkshopTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FindYourCarWorkshopTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -558,15 +567,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FindYourMechanicalWorkshop/Pods-FindYourMechanicalWorkshop-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FindYourCarWorkshop/Pods-FindYourCarWorkshop-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FindYourMechanicalWorkshop/Pods-FindYourMechanicalWorkshop-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FindYourCarWorkshop/Pods-FindYourCarWorkshop-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindYourMechanicalWorkshop/Pods-FindYourMechanicalWorkshop-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindYourCarWorkshop/Pods-FindYourCarWorkshop-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C1FEEE1FC240307398DFA4DD /* [CP] Check Pods Manifest.lock */ = {
@@ -584,7 +593,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FindYourMechanicalWorkshop-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FindYourCarWorkshop-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -598,7 +607,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45567DC122EA179B0007CF05 /* FindYourMechanicalWorkshop.xcdatamodeld in Sources */,
 				4526EF7322F3ADBA00BD4493 /* Workshop.swift in Sources */,
 				457C21EB22EB8803001AA9F0 /* WorkshopListProtocols.swift in Sources */,
 				45567DB922EA179B0007CF05 /* AppDelegate.swift in Sources */,
@@ -642,12 +650,12 @@
 /* Begin PBXTargetDependency section */
 		45567DCE22EA179E0007CF05 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 45567DB422EA179B0007CF05 /* FindYourMechanicalWorkshop */;
+			target = 45567DB422EA179B0007CF05 /* FindYourCarWorkshop */;
 			targetProxy = 45567DCD22EA179E0007CF05 /* PBXContainerItemProxy */;
 		};
 		45567DD922EA179E0007CF05 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 45567DB422EA179B0007CF05 /* FindYourMechanicalWorkshop */;
+			target = 45567DB422EA179B0007CF05 /* FindYourCarWorkshop */;
 			targetProxy = 45567DD822EA179E0007CF05 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -782,17 +790,17 @@
 		};
 		45567DE122EA179F0007CF05 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8CD69A319893C8A3A189D328 /* Pods-FindYourMechanicalWorkshop.debug.xcconfig */;
+			baseConfigurationReference = 565F962111F602CCDF3E4E59 /* Pods-FindYourCarWorkshop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQQC38YQ4S;
-				INFOPLIST_FILE = "$(SRCROOT)/FindYourMechanicalWorkshop/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FindYourCarWorkshop/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.anacarolinasantos.FindYourMechanicalWorkshop;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anacarolinasantos.FindYourCarWorkshop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -801,17 +809,17 @@
 		};
 		45567DE222EA179F0007CF05 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F799ABB94C567ED522E8C56D /* Pods-FindYourMechanicalWorkshop.release.xcconfig */;
+			baseConfigurationReference = AC966792B6561432F58ED4EB /* Pods-FindYourCarWorkshop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQQC38YQ4S;
-				INFOPLIST_FILE = "$(SRCROOT)/FindYourMechanicalWorkshop/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FindYourCarWorkshop/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.anacarolinasantos.FindYourMechanicalWorkshop;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anacarolinasantos.FindYourCarWorkshop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -820,7 +828,7 @@
 		};
 		45567DE422EA179F0007CF05 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B29E512DD2019D25D81A367 /* Pods-FindYourMechanicalWorkshopTests.debug.xcconfig */;
+			baseConfigurationReference = E8C7E96750F567ABABDDB1A0 /* Pods-FindYourCarWorkshopTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -836,13 +844,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindYourMechanicalWorkshop.app/FindYourMechanicalWorkshop";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindYourCarWorkshop.app/FindYourCarWorkshop";
 			};
 			name = Debug;
 		};
 		45567DE522EA179F0007CF05 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D6E1A2C0C435E8FFAE5CB9F8 /* Pods-FindYourMechanicalWorkshopTests.release.xcconfig */;
+			baseConfigurationReference = 2D7342D1C00D161E1F1B89EB /* Pods-FindYourCarWorkshopTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -858,13 +866,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindYourMechanicalWorkshop.app/FindYourMechanicalWorkshop";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindYourCarWorkshop.app/FindYourCarWorkshop";
 			};
 			name = Release;
 		};
 		45567DE722EA179F0007CF05 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BAF714E32589E77CEB90CB3 /* Pods-FindYourMechanicalWorkshopUITests.debug.xcconfig */;
+			baseConfigurationReference = 6B6694F9A55062A5A48DF845 /* Pods-FindYourCarWorkshopUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -885,7 +893,7 @@
 		};
 		45567DE822EA179F0007CF05 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A937469CDD8E22A218E54FF7 /* Pods-FindYourMechanicalWorkshopUITests.release.xcconfig */;
+			baseConfigurationReference = 348670B96AD4CD5D8EEA80D6 /* Pods-FindYourCarWorkshopUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -907,7 +915,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		45567DB022EA179B0007CF05 /* Build configuration list for PBXProject "FindYourMechanicalWorkshop" */ = {
+		45567DB022EA179B0007CF05 /* Build configuration list for PBXProject "FindYourCarWorkshop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				45567DDE22EA179F0007CF05 /* Debug */,
@@ -916,7 +924,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		45567DE022EA179F0007CF05 /* Build configuration list for PBXNativeTarget "FindYourMechanicalWorkshop" */ = {
+		45567DE022EA179F0007CF05 /* Build configuration list for PBXNativeTarget "FindYourCarWorkshop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				45567DE122EA179F0007CF05 /* Debug */,
@@ -925,7 +933,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		45567DE322EA179F0007CF05 /* Build configuration list for PBXNativeTarget "FindYourMechanicalWorkshopTests" */ = {
+		45567DE322EA179F0007CF05 /* Build configuration list for PBXNativeTarget "FindYourCarWorkshopTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				45567DE422EA179F0007CF05 /* Debug */,
@@ -934,7 +942,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		45567DE622EA179F0007CF05 /* Build configuration list for PBXNativeTarget "FindYourMechanicalWorkshopUITests" */ = {
+		45567DE622EA179F0007CF05 /* Build configuration list for PBXNativeTarget "FindYourCarWorkshopUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				45567DE722EA179F0007CF05 /* Debug */,
@@ -944,19 +952,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		45567DBF22EA179B0007CF05 /* FindYourMechanicalWorkshop.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				45567DC022EA179B0007CF05 /* FindYourMechanicalWorkshop.xcdatamodel */,
-			);
-			currentVersion = 45567DC022EA179B0007CF05 /* FindYourMechanicalWorkshop.xcdatamodel */;
-			path = FindYourMechanicalWorkshop.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 45567DAD22EA179B0007CF05 /* Project object */;
 }

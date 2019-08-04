@@ -21,6 +21,7 @@ protocol WorkshopDetailInteractorInputProtocol {
 // MARK: - Presenter
 protocol WorkshopDetailPresenterInputProtocol: class {
     func viewDidLoad()
+    func showMapsLaunchOption()
 }
 
 protocol WorkshopDetailInteractorOutputProtocol: class {
@@ -32,5 +33,6 @@ protocol WorkshopDetailInteractorOutputProtocol: class {
 protocol WorkshopDetailPresenterOutputProtocol: class {
     func showLoading(_ loading: Bool)
     func showError(message: String)
-    func reloadData()
+    func loadData(title: String)
+    func presentMapsOption()
 }

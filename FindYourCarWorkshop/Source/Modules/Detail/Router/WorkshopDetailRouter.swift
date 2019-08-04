@@ -26,8 +26,8 @@ class WorkshopDetailRouter: NSObject, WorkshopDetailRouterProtocol {
 		super.init()
 
 		let view = self.viewControllerFromStoryboard()
-		let interactor = WorkshopDetailInteractor()
-		let presenter = WorkshopDetailPresenter()
+        let interactor = WorkshopDetailInteractor()
+        let presenter = WorkshopDetailPresenter(workshop: workshop)
 
 		presenter.interactor = interactor
 		presenter.router = self
