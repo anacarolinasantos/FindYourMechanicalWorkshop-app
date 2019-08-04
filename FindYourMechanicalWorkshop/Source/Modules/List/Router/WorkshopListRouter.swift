@@ -37,14 +37,19 @@ class WorkshopListRouter: NSObject, WorkshopListRouterProtocol {
 
     // MARK: - WorkshopListRouterProtocol
     func present(with viewController: UIViewController) {
-        viewController.present(self.view, animated: true, completion: nil)
+        viewController.present(view, animated: true, completion: nil)
     }
     
     func presentAsRoot(window: UIWindow) {
-        let navigation = UINavigationController(rootViewController: self.view)
+        let navigation = UINavigationController(rootViewController: view)
         window.rootViewController = navigation
     }
 
+    func pushToCarWorkshopDetail(with: Workshop) {
+//        let answerQuestionrouter = AnswerQuestionRouter(question: question)
+//        answerQuestionrouter.present(with: self.view)
+    }
+    
 	// MARK: - Private methods
 	private func viewControllerFromStoryboard() -> WorkshopListView {
 		let storyboard = UIStoryboard(name: self.storyBoardName, bundle: nil)

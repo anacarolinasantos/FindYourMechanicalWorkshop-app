@@ -27,6 +27,7 @@
 		457C21EB22EB8803001AA9F0 /* WorkshopListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C21E522EB8803001AA9F0 /* WorkshopListProtocols.swift */; };
 		457C21EC22EB8803001AA9F0 /* WorkshopListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C21E622EB8803001AA9F0 /* WorkshopListInteractor.swift */; };
 		457C21ED22EB8803001AA9F0 /* WorkshopListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C21E722EB8803001AA9F0 /* WorkshopListView.swift */; };
+		45C72E0322F6348000F167A4 /* CarWorkshopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C72E0122F6348000F167A4 /* CarWorkshopTableViewCell.swift */; };
 		B1A4F102A932F4A2A7C9202C /* Pods_FindYourMechanicalWorkshopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71CF13A20D16A916809E321D /* Pods_FindYourMechanicalWorkshopUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		457C21E522EB8803001AA9F0 /* WorkshopListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopListProtocols.swift; sourceTree = "<group>"; };
 		457C21E622EB8803001AA9F0 /* WorkshopListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopListInteractor.swift; sourceTree = "<group>"; };
 		457C21E722EB8803001AA9F0 /* WorkshopListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopListView.swift; sourceTree = "<group>"; };
+		45C72E0122F6348000F167A4 /* CarWorkshopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarWorkshopTableViewCell.swift; sourceTree = "<group>"; };
 		4BAF714E32589E77CEB90CB3 /* Pods-FindYourMechanicalWorkshopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourMechanicalWorkshopUITests.debug.xcconfig"; path = "Target Support Files/Pods-FindYourMechanicalWorkshopUITests/Pods-FindYourMechanicalWorkshopUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		71CF13A20D16A916809E321D /* Pods_FindYourMechanicalWorkshopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindYourMechanicalWorkshopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B29E512DD2019D25D81A367 /* Pods-FindYourMechanicalWorkshopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourMechanicalWorkshopTests.debug.xcconfig"; path = "Target Support Files/Pods-FindYourMechanicalWorkshopTests/Pods-FindYourMechanicalWorkshopTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				457C21DE22EB87C9001AA9F0 /* Entities */,
+				45C72E0722F63C1500F167A4 /* Utils */,
 				457C21DF22EB87D1001AA9F0 /* Modules */,
 				457C21E022EB87D6001AA9F0 /* Services */,
 			);
@@ -225,6 +228,7 @@
 		457C21EE22EB8814001AA9F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				45C72E0022F6344C00F167A4 /* TableView */,
 				457C21E222EB8803001AA9F0 /* WorkshopList.storyboard */,
 				457C21E722EB8803001AA9F0 /* WorkshopListView.swift */,
 			);
@@ -253,6 +257,21 @@
 				457C21E422EB8803001AA9F0 /* WorkshopListRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		45C72E0022F6344C00F167A4 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				45C72E0122F6348000F167A4 /* CarWorkshopTableViewCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		45C72E0722F63C1500F167A4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		57B552BA05FDF700B6F4B8CD /* Pods */ = {
@@ -290,7 +309,7 @@
 				45567DB222EA179B0007CF05 /* Frameworks */,
 				45567DB322EA179B0007CF05 /* Resources */,
 				08E6ED1A1FA212BDCEC9668F /* [CP] Embed Pods Frameworks */,
-				98664922F47CA840712FE8A7 /* [CP] Copy Pods Resources */,
+				7F83A09286D333C306B4B34E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -471,7 +490,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		98664922F47CA840712FE8A7 /* [CP] Copy Pods Resources */ = {
+		7F83A09286D333C306B4B34E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -528,6 +547,7 @@
 				457C21EA22EB8803001AA9F0 /* WorkshopListRouter.swift in Sources */,
 				453F99B022F5FEF20037E57D /* GoogleAPIManager.swift in Sources */,
 				4553085922F6204700E56289 /* DecodableResponses.swift in Sources */,
+				45C72E0322F6348000F167A4 /* CarWorkshopTableViewCell.swift in Sources */,
 				4526EF6D22F2202B00BD4493 /* GoogleAPI.swift in Sources */,
 				457C21EC22EB8803001AA9F0 /* WorkshopListInteractor.swift in Sources */,
 			);
