@@ -36,6 +36,13 @@ class WorkshopDetailRouterRouter: NSObject, WorkshopDetailRouterProtocol {
 	}
 
     // MARK: - WorkshopDetailRouterProtocol
+    func push(from view: UIViewController) {
+        
+    }
+    
+    func dismiss() {
+        
+    }
 
 	// MARK: - Private methods
 	private func viewControllerFromStoryboard() -> WorkshopDetailView {
