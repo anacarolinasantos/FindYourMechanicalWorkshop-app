@@ -11,7 +11,6 @@ import UIKit
 // MARK: - Router
 protocol WorkshopDetailRouterProtocol: class {
     func push(from view: UIViewController)
-    func dismiss()
 }
 
 // MARK: - Interactor

@@ -45,9 +45,9 @@ class WorkshopListRouter: NSObject, WorkshopListRouterProtocol {
         window.rootViewController = navigation
     }
 
-    func pushToCarWorkshopDetail(with: Workshop) {
-//        let answerQuestionrouter = AnswerQuestionRouter(question: question)
-//        answerQuestionrouter.present(with: self.view)
+    func pushToCarWorkshopDetail(with workshop: Workshop) {
+        let workshopDetailRouter = WorkshopDetailRouter(with: workshop)
+        workshopDetailRouter.push(from: self.view)
     }
     
 	// MARK: - Private methods

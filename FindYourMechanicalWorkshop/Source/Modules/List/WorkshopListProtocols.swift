@@ -12,7 +12,7 @@ import UIKit
 protocol WorkshopListRouterProtocol: class {
     func present(with viewController: UIViewController)
     func presentAsRoot(window: UIWindow)
-    func pushToCarWorkshopDetail(with: Workshop)
+    func pushToCarWorkshopDetail(with workshop: Workshop)
 }
 
 // MARK: - Interactor

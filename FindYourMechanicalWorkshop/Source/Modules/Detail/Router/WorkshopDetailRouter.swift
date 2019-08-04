@@ -8,17 +8,21 @@
 
 import UIKit
 
-class WorkshopDetailRouterRouter: NSObject, WorkshopDetailRouterProtocol {
+class WorkshopDetailRouter: NSObject, WorkshopDetailRouterProtocol {
 
 	// MARK: - Constants
 	private let storyBoardName = "WorkshopDetail"
 	private let viewIdentifier = "WorkshopDetailView"
+    
+    // MARK: - Properties
+    var workshop: Workshop
 
 	// MARK: - Viper Module Properties
 	weak var view: WorkshopDetailView!
 
 	// MARK: - Constructors
-	override init() {
+    init(with workshop: Workshop) {
+        self.workshop = workshop
 		super.init()
 
 		let view = self.viewControllerFromStoryboard()
@@ -37,11 +41,7 @@ class WorkshopDetailRouterRouter: NSObject, WorkshopDetailRouterProtocol {
 
     // MARK: - WorkshopDetailRouterProtocol
     func push(from view: UIViewController) {
-        
-    }
-    
-    func dismiss() {
-        
+        view.navigationController?.pushViewController(self.view, animated: true)
     }
 
 	// MARK: - Private methods
