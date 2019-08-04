@@ -398,6 +398,7 @@
 				45567DC822EA179E0007CF05 /* Sources */,
 				45567DC922EA179E0007CF05 /* Frameworks */,
 				45567DCA22EA179E0007CF05 /* Resources */,
+				0A12C962AC15A62F0C0D9F27 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -515,6 +516,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindYourCarWorkshop/Pods-FindYourCarWorkshop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0A12C962AC15A62F0C0D9F27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindYourCarWorkshopTests/Pods-FindYourCarWorkshopTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindYourCarWorkshopTests/Pods-FindYourCarWorkshopTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindYourCarWorkshopTests/Pods-FindYourCarWorkshopTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		0BE43100704301653CB69DF9 /* [CP] Check Pods Manifest.lock */ = {
@@ -792,6 +810,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 565F962111F602CCDF3E4E59 /* Pods-FindYourCarWorkshop.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQQC38YQ4S;
@@ -811,6 +830,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AC966792B6561432F58ED4EB /* Pods-FindYourCarWorkshop.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQQC38YQ4S;
@@ -830,7 +850,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E8C7E96750F567ABABDDB1A0 /* Pods-FindYourCarWorkshopTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQQC38YQ4S;
@@ -852,7 +872,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2D7342D1C00D161E1F1B89EB /* Pods-FindYourCarWorkshopTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQQC38YQ4S;
@@ -874,7 +894,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6B6694F9A55062A5A48DF845 /* Pods-FindYourCarWorkshopUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQQC38YQ4S;
 				INFOPLIST_FILE = FindYourMechanicalWorkshopUITests/Info.plist;
@@ -895,7 +915,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 348670B96AD4CD5D8EEA80D6 /* Pods-FindYourCarWorkshopUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQQC38YQ4S;
 				INFOPLIST_FILE = FindYourMechanicalWorkshopUITests/Info.plist;
