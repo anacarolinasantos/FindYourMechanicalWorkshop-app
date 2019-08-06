@@ -11,61 +11,76 @@ import Moya
 final class GoogleAPIManager {
     
     // MARK: - Static Reference
-    
     static let shared = GoogleAPIManager()
     
     // MARK: - Private Properties
-    
 //    private let persistencyManager = PersistencyManager()
     private let isOnMoyaProviderline = false
     private let provider: MoyaProvider<GoogleAPI>
     
     // MARK: - Private Initializer
-    
     private init() {
         provider = MoyaProvider<GoogleAPI>()
     }
     
     // MARK: - Private Methods
-    private func requestObject<T: Decodable>(_ token: GoogleAPI,
-                                            completion: @escaping (T?, MoyaError?) -> Void) {
-        
-        provider.request(token) { result in
+    private func requestObject<T: Decodable>(_ token: GoogleAPI, completion: @escaping (T?, MoyaError?) -> Void) {
+        provider.request(token) { [weak self] result in
             switch result {
             case .success(let response):
                 do{
-                    // FIXME: Check status code to handle error
-                    let t = try response.map(GooglePlaceResult<T>.self).result
-                    completion(t, nil)
+                    let filterResponse = try response.filterSuccessfulStatusCodes()
+                    let object = try filterResponse.map(GooglePlaceResult<T>.self)
+                    
+                    if let googleError = self?.filterGoogleSuccessfulStatus(with: object.status) {
+                        let error = MoyaError.requestMapping(googleError)
+                        completion(nil, error)
+                    } else {
+                        completion(object.result, nil)
+                    }
                 } catch let error {
-                    // FIXME: handle error
                     completion(nil, error as? MoyaError)
                 }
             case .failure(let error):
-                // FIXME: handle error
                 completion(nil, error)
             }
         }
     }
     
-    private func requestArray<T: Decodable>(_ token: GoogleAPI,
-                      completion: @escaping ([T]?, MoyaError?) -> Void) {
-        
-        provider.request(token) { result in
+    private func requestArray<T: Decodable>(_ token: GoogleAPI, completion: @escaping ([T]?, MoyaError?) -> Void) {
+        provider.request(token) { [weak self] result in
             switch result {
             case .success(let response):
                 do{
-                    // FIXME: Check status code to handle error
-                    let t = try response.map(GooglePlaceResults<T>.self).results
-                    completion(t, nil)
+                    let filterResponse = try response.filterSuccessfulStatusCodes()
+                    let object = try filterResponse.map(GooglePlaceResults<T>.self)
+                    
+                    if let googleError = self?.filterGoogleSuccessfulStatus(with: object.status) {
+                        let error = MoyaError.requestMapping(googleError)
+                        completion(nil, error)
+                    } else {
+                        completion(object.results, nil)
+                    }
                 } catch let error {
-                    // FIXME: handle error
                     completion(nil, error as? MoyaError)
                 }
             case .failure(let error):
-                // FIXME: handle error
                 completion(nil, error)
             }
+        }
+    }
+    
+    private func filterGoogleSuccessfulStatus(with status: String) -> String? {
+        switch status {
+        case GoogleStatusResult.overQueryLimit.rawValue:
+            return GoogleStatusResult.overQueryLimit.errorDescription
+        case GoogleStatusResult.requestDenied.rawValue:
+            return GoogleStatusResult.requestDenied.errorDescription
+        case GoogleStatusResult.invalidRequest.rawValue:
+            return GoogleStatusResult.invalidRequest.errorDescription
+        case GoogleStatusResult.unknownError.rawValue:
+            return GoogleStatusResult.unknownError.errorDescription
+        default: return nil
         }
     }
     

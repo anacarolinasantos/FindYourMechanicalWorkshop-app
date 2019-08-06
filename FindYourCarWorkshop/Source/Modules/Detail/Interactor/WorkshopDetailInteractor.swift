@@ -15,16 +15,16 @@ class WorkshopDetailInteractor: NSObject, WorkshopDetailInteractorInputProtocol 
 
 	// MARK: - WorkshopDetailInteractorInputProtocol
     func fetchCarWorkshopDetail(with id: String) {
-        GoogleAPIManager.shared.getPlaceDetail(with: "ChIJ6SZoHaVVzpQRuE9OpSRuu-w") { [unowned self] (result, error) in
+        GoogleAPIManager.shared.getPlaceDetail(with: "ChIJ6SZoHaVVzpQRuE9OpSRuu-w") { [weak self] (result, error) in
             
-            if error != nil {
-                self.output.handleFailure(with: "deu erro!")
+            if let aError = error {
+                self?.output.handleFailure(with: aError.errorDescription ?? GoogleStatusResult.unknownError.errorDescription)
             } else {
                 guard let workshop = result else {
-                    self.output.handleFailure(with: "outro erro!")
+                    self?.output.handleFailure(with: GoogleStatusResult.unknownError.errorDescription)
                     return
                 }
-                self.output.handleSuccess(with: workshop)
+                self?.output.handleSuccess(with: workshop)
             }
         }
     }

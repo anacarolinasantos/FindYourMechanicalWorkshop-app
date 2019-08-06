@@ -19,16 +19,21 @@ class WorkshopListInteractor: NSObject, WorkshopListInteractorInputProtocol {
 
 	// MARK: - WorkshopListInteractorInputProtocol
     func fetchCarWorkshopList(near location: Location) {
-        GoogleAPIManager.shared.getPlacesNear(location: location, type: workshopType) { [unowned self] (result, error) in
+        GoogleAPIManager.shared.getPlacesNear(location: location, type: workshopType) { [weak self] (result, error) in
             
-            if error != nil {
-                self.output.handleFailure(with: "deu erro!")
+            if let aError = error {
+                self?.output.handleFailure(with: aError.errorDescription ?? GoogleStatusResult.unknownError.errorDescription)
             } else {
                 guard let workshops = result else {
-                    self.output.handleFailure(with: "outro erro!")
+                    self?.output.handleFailure(with: GoogleStatusResult.unknownError.errorDescription)
                     return
                 }
-                self.output.handleSuccess(with: workshops)
+                
+                if workshops.isEmpty {
+                    self?.output.handleFailure(with: GoogleStatusResult.zeroResults.errorDescription)
+                } else {
+                    self?.output.handleSuccess(with: workshops)
+                }
             }
         }
     }

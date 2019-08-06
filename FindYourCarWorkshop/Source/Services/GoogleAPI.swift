@@ -9,22 +9,18 @@
 import Keys
 import Moya
 
-/// Configuration to access Google API
 fileprivate struct GoogleAPIConfig {
-    fileprivate static let keys = FindYourMechanicalWorkshopKeys()
+    fileprivate static let keys = FindYourCarWorkshopKeys()
     static let apiKey = keys.googleApiKey
 }
 
-// FIXME: Add documentation for this enum!
 enum GoogleAPI: TargetType {
     
     // MARK: - Google API Cases
-    
     case findPlacesNear(location: Location, type: String?)
     case findDetail(id: String)
     
     // MARK: - Moya Target Type Properties
-    
     var baseURL: URL {
         return URL(string: "https://maps.googleapis.com/maps/api/place/")!
     }
