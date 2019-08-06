@@ -240,8 +240,8 @@
 			children = (
 				4526EF7222F3ADBA00BD4493 /* Workshop.swift */,
 				4553085A22F6235200E56289 /* Location.swift */,
-				4553085822F6204700E56289 /* DecodableResponses.swift */,
 				454B781922F76470001A4440 /* PhotoInfo.swift */,
+				4553085822F6204700E56289 /* DecodableResponses.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";

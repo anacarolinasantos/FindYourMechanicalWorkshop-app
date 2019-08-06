@@ -14,6 +14,7 @@ class WorkshopListView: UIViewController, WorkshopListPresenterOutputProtocol, U
     @IBOutlet weak var listTableView: UITableView!
     
     // MARK: - Properties
+    private let kEmptyTableViewCellIdentifier = "EmptyTableViewCell"
     
 	// MARK: - Viper Module Properties
 	var presenter: WorkshopListPresenterInputProtocol!
@@ -31,7 +32,11 @@ class WorkshopListView: UIViewController, WorkshopListPresenterOutputProtocol, U
     }
     
     func showError(message: String) {
+//        listTableView.re
         
+        let alert = UIAlertController(title: "Sorry", message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
     func reloadData() {
@@ -40,8 +45,6 @@ class WorkshopListView: UIViewController, WorkshopListPresenterOutputProtocol, U
 
 	// MARK: - Private Methods
     func prepareViewController() {
-//        listTableView.register(cellType: CarWorkshopTableViewCell.self)
-        
         listTableView.dataSource = self
         listTableView.delegate = self
     }
@@ -60,7 +63,12 @@ class WorkshopListView: UIViewController, WorkshopListPresenterOutputProtocol, U
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as CarWorkshopTableViewCell
         
-        cell.setup(with: presenter.item(at: indexPath.row))
+        guard let workshop = presenter.item(at: indexPath.row) else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: kEmptyTableViewCellIdentifier, for: indexPath)
+            return cell
+        }
+        
+        cell.setup(with: workshop)
         
         return cell
     }

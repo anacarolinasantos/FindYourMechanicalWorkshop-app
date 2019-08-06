@@ -22,18 +22,18 @@ class WorkshopListInteractor: NSObject, WorkshopListInteractorInputProtocol {
         GoogleAPIManager.shared.getPlacesNear(location: location, type: workshopType) { [weak self] (result, error) in
             
             if let aError = error {
-                self?.output.handleFailure(with: aError.errorDescription ?? GoogleStatusResult.unknownError.errorDescription)
+                switch aError {
+                case .requestMapping(let message):
+                    self?.output.handleFailure(with: message)
+                default:
+                    self?.output.handleFailure(with: aError.errorDescription ?? GoogleStatusResult.unknownError.errorDescription)
+                }
             } else {
                 guard let workshops = result else {
                     self?.output.handleFailure(with: GoogleStatusResult.unknownError.errorDescription)
                     return
                 }
-                
-                if workshops.isEmpty {
-                    self?.output.handleFailure(with: GoogleStatusResult.zeroResults.errorDescription)
-                } else {
-                    self?.output.handleSuccess(with: workshops)
-                }
+                self?.output.handleSuccess(with: workshops)
             }
         }
     }

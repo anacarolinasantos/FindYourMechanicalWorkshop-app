@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Moya
 
 class WorkshopDetailInteractor: NSObject, WorkshopDetailInteractorInputProtocol {
 
@@ -18,7 +19,12 @@ class WorkshopDetailInteractor: NSObject, WorkshopDetailInteractorInputProtocol 
         GoogleAPIManager.shared.getPlaceDetail(with: "ChIJ6SZoHaVVzpQRuE9OpSRuu-w") { [weak self] (result, error) in
             
             if let aError = error {
-                self?.output.handleFailure(with: aError.errorDescription ?? GoogleStatusResult.unknownError.errorDescription)
+                switch aError {
+                case .requestMapping(let message):
+                    self?.output.handleFailure(with: message)
+                default:
+                    self?.output.handleFailure(with: aError.errorDescription ?? GoogleStatusResult.unknownError.errorDescription)
+                }
             } else {
                 guard let workshop = result else {
                     self?.output.handleFailure(with: GoogleStatusResult.unknownError.errorDescription)

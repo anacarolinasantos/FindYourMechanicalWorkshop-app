@@ -33,8 +33,7 @@ final class GoogleAPIManager {
                     let object = try filterResponse.map(GooglePlaceResult<T>.self)
                     
                     if let googleError = self?.filterGoogleSuccessfulStatus(with: object.status) {
-                        let error = MoyaError.requestMapping(googleError)
-                        completion(nil, error)
+                        completion(nil, googleError)
                     } else {
                         completion(object.result, nil)
                     }
@@ -56,8 +55,7 @@ final class GoogleAPIManager {
                     let object = try filterResponse.map(GooglePlaceResults<T>.self)
                     
                     if let googleError = self?.filterGoogleSuccessfulStatus(with: object.status) {
-                        let error = MoyaError.requestMapping(googleError)
-                        completion(nil, error)
+                        completion(nil, googleError)
                     } else {
                         completion(object.results, nil)
                     }
@@ -70,18 +68,20 @@ final class GoogleAPIManager {
         }
     }
     
-    private func filterGoogleSuccessfulStatus(with status: String) -> String? {
+    private func filterGoogleSuccessfulStatus(with status: String) -> MoyaError? {
+        var error: GoogleStatusResult
         switch status {
         case GoogleStatusResult.overQueryLimit.rawValue:
-            return GoogleStatusResult.overQueryLimit.errorDescription
+            error = GoogleStatusResult.overQueryLimit
         case GoogleStatusResult.requestDenied.rawValue:
-            return GoogleStatusResult.requestDenied.errorDescription
+            error = GoogleStatusResult.requestDenied
         case GoogleStatusResult.invalidRequest.rawValue:
-            return GoogleStatusResult.invalidRequest.errorDescription
+            error = GoogleStatusResult.invalidRequest
         case GoogleStatusResult.unknownError.rawValue:
-            return GoogleStatusResult.unknownError.errorDescription
+            error = GoogleStatusResult.unknownError
         default: return nil
         }
+        return MoyaError.requestMapping(error.errorDescription)
     }
     
     // MARK: - Public Methods

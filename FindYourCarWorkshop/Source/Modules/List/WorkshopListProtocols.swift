@@ -27,7 +27,7 @@ protocol WorkshopListPresenterInputProtocol: class {
     func numberOfSections() -> Int
     func numberOfItems(in section: Int) -> Int
     
-    func item(at indexPath: Int) -> Workshop
+    func item(at indexPath: Int) -> Workshop?
     func didSelectItem(at indexPath: Int)
     
     func searchWorkshops(near location: Location)

@@ -37,10 +37,16 @@ class WorkshopListPresenter: NSObject, WorkshopListPresenterInputProtocol, Works
     }
     
     func numberOfItems(in section: Int) -> Int {
+        if workshops.isEmpty {
+            return 1
+        }
         return workshops.count
     }
     
-    func item(at indexPath: Int) -> Workshop {
+    func item(at indexPath: Int) -> Workshop? {
+        if workshops.isEmpty {
+            return nil
+        }
         return workshops[indexPath]
     }
     
@@ -61,7 +67,7 @@ class WorkshopListPresenter: NSObject, WorkshopListPresenterInputProtocol, Works
     }
     
     // MARK: - Private Methods
-    func getCurrentLocation() -> Location {
+    private func getCurrentLocation() -> Location {
         return Location(-23.586079, -46.7786114)
     }
 }
