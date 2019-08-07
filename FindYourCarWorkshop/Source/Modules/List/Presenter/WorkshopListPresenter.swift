@@ -12,6 +12,7 @@ class WorkshopListPresenter: NSObject, WorkshopListPresenterInputProtocol, Works
 
     // MARK: - Properties
     private var workshops: [Workshop] = []
+    private let kMaxImageWidth = 70
     
 	// MARK: - Viper Module Properties
     weak var view: WorkshopListPresenterOutputProtocol!
@@ -43,6 +44,13 @@ class WorkshopListPresenter: NSObject, WorkshopListPresenterInputProtocol, Works
     
     func didSelectItem(at indexPath: Int) {
         router.pushToCarWorkshopDetail(with: workshops[indexPath])
+    }
+    
+    func getPhotoURL(at indexPath: Int) -> String? {
+        if let photos = workshops[indexPath].photos {
+            return interactor.getPhotoURL(with: photos[0].reference, maxWidth: kMaxImageWidth)
+        }
+        return nil
     }
 
     // MARK: - WorkshopListPresenterInteractorOutputProtocol

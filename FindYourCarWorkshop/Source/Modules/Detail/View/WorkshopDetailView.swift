@@ -46,10 +46,10 @@ class WorkshopDetailView: UIViewController, WorkshopDetailPresenterOutputProtoco
 //        marker.position = location
 //        marker.title = presenter.workshop.name
 //        marker.snippet = presenter.workshop.address
-        marker.map = mapView
+//        marker.map = mapView
         
 //        mapView.animate(toLocation: location)
-        mapView.animate(toZoom: 16)
+//        mapView.animate(toZoom: 16)
     }
 
     func presentMapsOption() {

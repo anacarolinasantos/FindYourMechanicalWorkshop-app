@@ -18,6 +18,7 @@ target 'FindYourCarWorkshop' do
     pod 'GooglePlaces', '~> 3.2.0'
     pod 'GoogleMaps', '~> 3.2.0'
     pod 'Reusable', '~> 4.0.2'
+    pod 'Kingfisher', '~> 5.0'
 
   target 'FindYourCarWorkshopTests' do
     inherit! :search_paths

@@ -13,9 +13,9 @@ struct Location: Decodable {
     let longitude : Double
     
     enum CodingKeys : String, CodingKey {
-        case location = "location"
         case latitude = "lat"
         case longitude = "lng"
+        case location
     }
     
     init(_ lat: Double, _ lon: Double) {

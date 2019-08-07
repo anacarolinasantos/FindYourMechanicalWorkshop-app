@@ -64,8 +64,7 @@ class WorkshopListView: UIViewController, WorkshopListPresenterOutputProtocol, U
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as CarWorkshopTableViewCell
-        
-        cell.setup(with: presenter.item(at: indexPath.row))
+        cell.setup(with: presenter.item(at: indexPath.row), photoURL: presenter.getPhotoURL(at: indexPath.row))
         
         return cell
     }

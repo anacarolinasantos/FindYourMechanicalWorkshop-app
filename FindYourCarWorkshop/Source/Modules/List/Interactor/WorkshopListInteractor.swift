@@ -37,6 +37,10 @@ class WorkshopListInteractor: NSObject, WorkshopListInteractorInputProtocol {
             }
         }
     }
+    
+    func getPhotoURL(with reference: String, maxWidth: Int) -> String {
+        return GoogleAPIManager.shared.getPhotoURL(with: reference, maxWidth: maxWidth)
+    }
 
     // MARK: - Private Methods
 

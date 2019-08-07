@@ -15,15 +15,19 @@ struct Workshop: Decodable {
     let name: String
     let photos: [PhotoInfo]?
     let address: String
+    let formattedAddress: String?
+    let formattedPhoneNumber: String?
+    let website: String?
     let rating: Double?
-    let priceLevel: Int?
     
     enum CodingKeys : String, CodingKey {
-        case geometry = "geometry"
-        case name = "name"
         case address = "vicinity"
         case id = "place_id"
-        case priceLevel = "price_level"
+        case formattedAddress = "formatted_address"
+        case formattedPhoneNumber = "formatted_phone_number"
+        case website
+        case geometry
+        case name
         case rating
         case photos
     }
@@ -36,6 +40,8 @@ struct Workshop: Decodable {
         id = try values.decode(String.self, forKey: .id)
         photos = try? values.decode([PhotoInfo].self, forKey: .photos)
         rating = try? values.decode(Double.self, forKey: .rating)
-        priceLevel = try? values.decode(Int.self, forKey: .priceLevel)
+        formattedAddress = try? values.decode(String.self, forKey: .formattedAddress)
+        formattedPhoneNumber = try? values.decode(String.self, forKey: .formattedPhoneNumber)
+        website = try? values.decode(String.self, forKey: .website)
     }
 }

@@ -8,53 +8,43 @@
 
 import UIKit
 import Reusable
+import Kingfisher
 
 final class CarWorkshopTableViewCell: UITableViewCell, Reusable {
 
     // MARK: - Outlets
     @IBOutlet weak var carWorkshopNameLabel: UILabel!
     @IBOutlet weak var carWorkshopImage: UIImageView!
-    @IBOutlet weak var carWorkshopPriceLevelLabel: UILabel!
     @IBOutlet weak var carWorkshopRatingLabel: UILabel!
     
+    @IBOutlet weak var carWorkshopTrailingSuperviewConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var carWorkshopTrailingRatingConstraint: NSLayoutConstraint!
+    
     // MARK: - Setup Cell
-    func setup(with workshop: Workshop) {
+    func setup(with workshop: Workshop, photoURL: String?) {
+        
+        if let aPhotoURL = photoURL {
+            let url = URL(string: aPhotoURL)
+            carWorkshopImage.kf.indicatorType = .activity
+            carWorkshopImage.kf.setImage(with: url,
+                                         placeholder: UIImage(named: "placeholder-image"))
+        }
+        
         carWorkshopNameLabel.text = workshop.name
         
         guard let rating = workshop.rating else {
-//            remove(view: carWorkshopRatingLabel)
+//            handleNameLabelConstraints()
             return
         }
         carWorkshopRatingLabel.text = String(rating)
-        
-        guard let priceLevel = workshop.priceLevel else {
-//            remove(view: carWorkshopPriceLevelLabel)
-            return
-        }
-        carWorkshopPriceLevelLabel.text = createPriceLevel(with: priceLevel)
     }
     
     // MARK: - Private Methods
-    private func remove(view: UIView) {
-        view.removeFromSuperview()
+    private func handleNameLabelConstraints() {
+        carWorkshopTrailingRatingConstraint.priority = UILayoutPriority(rawValue: 250)
+        carWorkshopTrailingSuperviewConstraint.priority = UILayoutPriority(rawValue: 1000)
+        carWorkshopRatingLabel.isHidden = true
         layoutIfNeeded()
-    }
-    
-    private func createPriceLevel(with level: Int) -> String {
-        
-        
-        if level == 0 {
-            return "Free"
-        } else {
-            var priceLevel = String()
-            
-            for _ in 1...level {
-                priceLevel += "$"
-            }
-            
-            return priceLevel
-        }
-        
-        
     }
 }

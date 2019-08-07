@@ -19,6 +19,7 @@ enum GoogleAPI: TargetType {
     // MARK: - Google API Cases
     case findPlacesNear(location: Location, type: String?)
     case findDetail(id: String)
+    case getPhoto(reference: String, maxWidth: Int)
     
     // MARK: - Moya Target Type Properties
     var baseURL: URL {
@@ -29,6 +30,7 @@ enum GoogleAPI: TargetType {
         switch self {
         case .findPlacesNear(_, _): return "nearbysearch/json"
         case .findDetail(_): return "details/json"
+        case .getPhoto(_, _): return "photo"
         }
     }
     
@@ -36,6 +38,7 @@ enum GoogleAPI: TargetType {
         switch self {
         case .findPlacesNear(_, _): return .get
         case .findDetail(_): return .get
+        case .getPhoto(_, _): return .get
         }
     }
     
@@ -45,36 +48,33 @@ enum GoogleAPI: TargetType {
     
     var parameters: [String: Any] {
         let authParams: [String : Any] = ["key": GoogleAPIConfig.apiKey]
-        
+        var params: [String : Any]
         switch self {
         case .findPlacesNear(let location, let type):
-            var params: [String : Any] = [
+            params = [
                 "location":"\(location.latitude),\(location.longitude)",
                 "rankby": "distance"
             ]
-            params.merge(authParams){(current, _) in current}
             if let aType = type {
                 params.merge(["type": aType]){(current, _) in current}
-                return params
+                break
             }
-            return params
         case .findDetail(let id):
-            var params: [String : Any] = [
+            params = [
                 "placeid":"\(id)"
             ]
-            params.merge(authParams){(current, _) in current}
-            return params
+        case .getPhoto(let reference, let maxWidth):
+            params = [
+                "photoreference": reference,
+                "maxwidth": maxWidth
+            ]
         }
+        params.merge(authParams){(current, _) in current}
+        return params
     }
     
     var task: Task {
-        switch self {
-        case .findPlacesNear(_, _):
-            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
-        case .findDetail(_):
-            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
-        }
-        
+        return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
     }
     
     var headers: [String : String]? {

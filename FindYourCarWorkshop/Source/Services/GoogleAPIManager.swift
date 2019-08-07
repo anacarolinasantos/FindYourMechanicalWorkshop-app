@@ -7,6 +7,7 @@
 //
 
 import Moya
+import GooglePlaces
 
 final class GoogleAPIManager {
     
@@ -67,6 +68,22 @@ final class GoogleAPIManager {
         }
     }
     
+    private func requestImage(_ token: GoogleAPI, completion: @escaping (Data?, MoyaError?) -> Void) {
+        provider.request(token) { result in
+            switch result {
+            case .success(let response):
+                do{
+                    let filterResponse = try response.filterSuccessfulStatusCodes()
+                    completion(filterResponse.data, nil)
+                } catch let error {
+                    completion(nil, error as? MoyaError)
+                }
+            case .failure(let error):
+                completion(nil, error)
+            }
+        }
+    }
+    
     private func filterGoogleSuccessfulStatus(with status: String) -> MoyaError? {
         var error: GoogleStatusResult
         switch status {
@@ -93,5 +110,14 @@ final class GoogleAPIManager {
     
     func getPlaceDetail(with id: String, completion: @escaping (Workshop?, MoyaError?) -> Void) {
         requestObject(.findDetail(id: id), completion: completion)
+    }
+    
+    func getPhotoURL(with reference: String, maxWidth: Int) -> String {
+        if let request = try? MoyaProvider.defaultEndpointMapping(for: GoogleAPI.getPhoto(reference: reference, maxWidth: maxWidth)).urlRequest(),
+            let url = request.url {
+            let key = url.absoluteString
+            return key
+        }
+        return ""
     }
 }

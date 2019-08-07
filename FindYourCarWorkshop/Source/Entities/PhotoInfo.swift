@@ -15,9 +15,9 @@ struct PhotoInfo: Decodable {
     let reference : String
     
     enum CodingKeys : String, CodingKey {
-        case height = "height"
-        case width = "width"
         case reference = "photo_reference"
+        case height
+        case width
     }
     
     init(from decoder:Decoder) throws {

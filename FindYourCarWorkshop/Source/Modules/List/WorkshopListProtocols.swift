@@ -18,6 +18,7 @@ protocol WorkshopListRouterProtocol: class {
 // MARK: - Interactor
 protocol WorkshopListInteractorInputProtocol {
     func fetchCarWorkshopList(near location: Location)
+    func getPhotoURL(with reference: String, maxWidth: Int) -> String
 }
 
 // MARK: - Presenter
@@ -31,6 +32,8 @@ protocol WorkshopListPresenterInputProtocol: class {
     func didSelectItem(at indexPath: Int)
     
     func searchWorkshops(near location: Location)
+    
+    func getPhotoURL(at indexPath: Int) -> String?
 }
 
 protocol WorkshopListInteractorOutputProtocol: class {
