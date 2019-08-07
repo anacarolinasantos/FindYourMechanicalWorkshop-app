@@ -14,7 +14,6 @@ final class GoogleAPIManager {
     static let shared = GoogleAPIManager()
     
     // MARK: - Private Properties
-//    private let persistencyManager = PersistencyManager()
     private let isOnMoyaProviderline = false
     private let provider: MoyaProvider<GoogleAPI>
     

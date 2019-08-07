@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		22868AC9FA9DDBB496F756AD /* Pods_FindYourCarWorkshopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0BFCD0492B3F057ECA3BA2 /* Pods_FindYourCarWorkshopUITests.framework */; };
 		4526EF6D22F2202B00BD4493 /* GoogleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4526EF6C22F2202B00BD4493 /* GoogleAPI.swift */; };
-		4526EF7122F2205300BD4493 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4526EF7022F2205300BD4493 /* PersistencyManager.swift */; };
 		4526EF7322F3ADBA00BD4493 /* Workshop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4526EF7222F3ADBA00BD4493 /* Workshop.swift */; };
 		453F99B022F5FEF20037E57D /* GoogleAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453F99AF22F5FEF20037E57D /* GoogleAPIManager.swift */; };
 		454B780F22F72D1C001A4440 /* WorkshopDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 454B780922F72D1C001A4440 /* WorkshopDetail.storyboard */; };
@@ -58,7 +57,6 @@
 		2D7342D1C00D161E1F1B89EB /* Pods-FindYourCarWorkshopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourCarWorkshopTests.release.xcconfig"; path = "Target Support Files/Pods-FindYourCarWorkshopTests/Pods-FindYourCarWorkshopTests.release.xcconfig"; sourceTree = "<group>"; };
 		348670B96AD4CD5D8EEA80D6 /* Pods-FindYourCarWorkshopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourCarWorkshopUITests.release.xcconfig"; path = "Target Support Files/Pods-FindYourCarWorkshopUITests/Pods-FindYourCarWorkshopUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4526EF6C22F2202B00BD4493 /* GoogleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAPI.swift; sourceTree = "<group>"; };
-		4526EF7022F2205300BD4493 /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		4526EF7222F3ADBA00BD4493 /* Workshop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workshop.swift; sourceTree = "<group>"; };
 		453F99AF22F5FEF20037E57D /* GoogleAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAPIManager.swift; sourceTree = "<group>"; };
 		454B780922F72D1C001A4440 /* WorkshopDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkshopDetail.storyboard; sourceTree = "<group>"; };
@@ -260,7 +258,6 @@
 			children = (
 				453F99AF22F5FEF20037E57D /* GoogleAPIManager.swift */,
 				4526EF6C22F2202B00BD4493 /* GoogleAPI.swift */,
-				4526EF7022F2205300BD4493 /* PersistencyManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -630,7 +627,6 @@
 				45567DB922EA179B0007CF05 /* AppDelegate.swift in Sources */,
 				454B781A22F76470001A4440 /* PhotoInfo.swift in Sources */,
 				457C21E922EB8803001AA9F0 /* WorkshopListPresenter.swift in Sources */,
-				4526EF7122F2205300BD4493 /* PersistencyManager.swift in Sources */,
 				454B781322F72D1C001A4440 /* WorkshopDetailInteractor.swift in Sources */,
 				454B781122F72D1C001A4440 /* WorkshopDetailRouter.swift in Sources */,
 				454B781022F72D1C001A4440 /* WorkshopDetailPresenter.swift in Sources */,
