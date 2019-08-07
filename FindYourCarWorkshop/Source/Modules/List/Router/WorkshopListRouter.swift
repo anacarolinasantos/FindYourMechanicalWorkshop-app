@@ -22,7 +22,7 @@ class WorkshopListRouter: NSObject, WorkshopListRouterProtocol {
 		super.init()
 
 		let view = self.viewControllerFromStoryboard()
-		let interactor = WorkshopListInteractor()
+        let interactor = WorkshopListInteractor(client: GoogleAPIManager.shared)
 		let presenter = WorkshopListPresenter()
 
 		presenter.interactor = interactor

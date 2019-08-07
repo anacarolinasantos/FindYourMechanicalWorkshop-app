@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		22868AC9FA9DDBB496F756AD /* Pods_FindYourCarWorkshopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0BFCD0492B3F057ECA3BA2 /* Pods_FindYourCarWorkshopUITests.framework */; };
+		4516A90322FB73D3002E4D05 /* workshop-list.json in Resources */ = {isa = PBXBuildFile; fileRef = 4516A90222FB73D3002E4D05 /* workshop-list.json */; };
 		4526EF6D22F2202B00BD4493 /* GoogleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4526EF6C22F2202B00BD4493 /* GoogleAPI.swift */; };
 		4526EF7322F3ADBA00BD4493 /* Workshop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4526EF7222F3ADBA00BD4493 /* Workshop.swift */; };
 		453F99B022F5FEF20037E57D /* GoogleAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453F99AF22F5FEF20037E57D /* GoogleAPIManager.swift */; };
@@ -23,7 +24,7 @@
 		45567DB922EA179B0007CF05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45567DB822EA179B0007CF05 /* AppDelegate.swift */; };
 		45567DC322EA179E0007CF05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45567DC222EA179E0007CF05 /* Assets.xcassets */; };
 		45567DC622EA179E0007CF05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45567DC422EA179E0007CF05 /* LaunchScreen.storyboard */; };
-		45567DD122EA179E0007CF05 /* FindYourMechanicalWorkshopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45567DD022EA179E0007CF05 /* FindYourMechanicalWorkshopTests.swift */; };
+		45567DD122EA179E0007CF05 /* WorkshopListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45567DD022EA179E0007CF05 /* WorkshopListInteractorTests.swift */; };
 		45567DDC22EA179F0007CF05 /* FindYourMechanicalWorkshopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45567DDB22EA179F0007CF05 /* FindYourMechanicalWorkshopUITests.swift */; };
 		457C21E822EB8803001AA9F0 /* WorkshopList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457C21E222EB8803001AA9F0 /* WorkshopList.storyboard */; };
 		457C21E922EB8803001AA9F0 /* WorkshopListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C21E322EB8803001AA9F0 /* WorkshopListPresenter.swift */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		2D7342D1C00D161E1F1B89EB /* Pods-FindYourCarWorkshopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourCarWorkshopTests.release.xcconfig"; path = "Target Support Files/Pods-FindYourCarWorkshopTests/Pods-FindYourCarWorkshopTests.release.xcconfig"; sourceTree = "<group>"; };
 		348670B96AD4CD5D8EEA80D6 /* Pods-FindYourCarWorkshopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindYourCarWorkshopUITests.release.xcconfig"; path = "Target Support Files/Pods-FindYourCarWorkshopUITests/Pods-FindYourCarWorkshopUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4516A90222FB73D3002E4D05 /* workshop-list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "workshop-list.json"; sourceTree = "<group>"; };
 		4526EF6C22F2202B00BD4493 /* GoogleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAPI.swift; sourceTree = "<group>"; };
 		4526EF7222F3ADBA00BD4493 /* Workshop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workshop.swift; sourceTree = "<group>"; };
 		453F99AF22F5FEF20037E57D /* GoogleAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAPIManager.swift; sourceTree = "<group>"; };
@@ -74,7 +76,7 @@
 		45567DC522EA179E0007CF05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45567DC722EA179E0007CF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45567DCC22EA179E0007CF05 /* FindYourCarWorkshopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindYourCarWorkshopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		45567DD022EA179E0007CF05 /* FindYourMechanicalWorkshopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindYourMechanicalWorkshopTests.swift; sourceTree = "<group>"; };
+		45567DD022EA179E0007CF05 /* WorkshopListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopListInteractorTests.swift; sourceTree = "<group>"; };
 		45567DD222EA179E0007CF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45567DD722EA179E0007CF05 /* FindYourCarWorkshopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindYourCarWorkshopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45567DDB22EA179F0007CF05 /* FindYourMechanicalWorkshopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindYourMechanicalWorkshopUITests.swift; sourceTree = "<group>"; };
@@ -198,7 +200,8 @@
 		45567DCF22EA179E0007CF05 /* FindYourCarWorkshopTests */ = {
 			isa = PBXGroup;
 			children = (
-				45567DD022EA179E0007CF05 /* FindYourMechanicalWorkshopTests.swift */,
+				45ACA2FF22FA88FE0069C1DE /* Detail */,
+				45ACA2FE22FA88F20069C1DE /* List */,
 				45567DD222EA179E0007CF05 /* Info.plist */,
 			);
 			path = FindYourCarWorkshopTests;
@@ -306,6 +309,22 @@
 				457C21E422EB8803001AA9F0 /* WorkshopListRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		45ACA2FE22FA88F20069C1DE /* List */ = {
+			isa = PBXGroup;
+			children = (
+				4516A90222FB73D3002E4D05 /* workshop-list.json */,
+				45567DD022EA179E0007CF05 /* WorkshopListInteractorTests.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		45ACA2FF22FA88FE0069C1DE /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		45C72E0022F6344C00F167A4 /* TableView */ = {
@@ -485,6 +504,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4516A90322FB73D3002E4D05 /* workshop-list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,7 +667,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45567DD122EA179E0007CF05 /* FindYourMechanicalWorkshopTests.swift in Sources */,
+				45567DD122EA179E0007CF05 /* WorkshopListInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -850,7 +870,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQQC38YQ4S;
-				INFOPLIST_FILE = FindYourMechanicalWorkshopTests/Info.plist;
+				INFOPLIST_FILE = FindYourCarWorkshopTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -872,7 +892,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQQC38YQ4S;
-				INFOPLIST_FILE = FindYourMechanicalWorkshopTests/Info.plist;
+				INFOPLIST_FILE = FindYourCarWorkshopTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -893,7 +913,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQQC38YQ4S;
-				INFOPLIST_FILE = FindYourMechanicalWorkshopUITests/Info.plist;
+				INFOPLIST_FILE = FindYourCarWorkshopUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -914,7 +934,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQQC38YQ4S;
-				INFOPLIST_FILE = FindYourMechanicalWorkshopUITests/Info.plist;
+				INFOPLIST_FILE = FindYourCarWorkshopUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

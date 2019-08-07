@@ -51,8 +51,6 @@ class WorkshopListView: UIViewController, WorkshopListPresenterOutputProtocol, U
         listTableView.delegate = self
     }
 
-    // MARK: - Action
-    
     // MARK: - TableView Data Source
     func numberOfSections(in tableView: UITableView) -> Int {
         return presenter.numberOfSections()

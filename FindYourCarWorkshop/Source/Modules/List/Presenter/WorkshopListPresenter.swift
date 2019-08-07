@@ -13,7 +13,7 @@ class WorkshopListPresenter: NSObject, WorkshopListPresenterInputProtocol, Works
 
     // MARK: - Properties
     private var locationManager = CLLocationManager()
-    private var workshops: [Workshop] = []
+    var workshops: [Workshop] = []
     
     private let kMaxImageWidth = 70
     

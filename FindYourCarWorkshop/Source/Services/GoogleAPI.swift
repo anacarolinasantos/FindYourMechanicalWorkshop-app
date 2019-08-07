@@ -9,8 +9,8 @@
 import Keys
 import Moya
 
-fileprivate struct GoogleAPIConfig {
-    fileprivate static let keys = FindYourCarWorkshopKeys()
+struct GoogleAPIConfig {
+    private static let keys = FindYourCarWorkshopKeys()
     static let apiKey = keys.googleApiKey
 }
 

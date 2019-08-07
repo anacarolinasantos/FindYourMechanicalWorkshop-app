@@ -16,7 +16,7 @@ protocol WorkshopListRouterProtocol: class {
 }
 
 // MARK: - Interactor
-protocol WorkshopListInteractorInputProtocol {
+protocol WorkshopListInteractorInputProtocol: class {
     func fetchCarWorkshopList(near location: Location)
     func getPhotoURL(with reference: String, maxWidth: Int) -> String
 }

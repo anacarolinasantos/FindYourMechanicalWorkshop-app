@@ -14,12 +14,18 @@ class WorkshopListInteractor: NSObject, WorkshopListInteractorInputProtocol {
     private var workshops: [Workshop] = []
     private let workshopType = "car_repair"
     
+    private let client: GoogleAPIManager
+    
+    init(client: GoogleAPIManager) {
+        self.client = client
+    }
+    
 	// MARK: - Viper Module Properties
     weak var output: WorkshopListInteractorOutputProtocol!
 
 	// MARK: - WorkshopListInteractorInputProtocol
     func fetchCarWorkshopList(near location: Location) {
-        GoogleAPIManager.shared.getPlacesNear(location: location, type: workshopType) { [weak self] (result, error) in
+        client.getPlacesNear(location: location, type: workshopType) { [weak self] (result, error) in
             
             if let aError = error {
                 switch aError {
@@ -39,9 +45,6 @@ class WorkshopListInteractor: NSObject, WorkshopListInteractorInputProtocol {
     }
     
     func getPhotoURL(with reference: String, maxWidth: Int) -> String {
-        return GoogleAPIManager.shared.getPhotoURL(with: reference, maxWidth: maxWidth)
+        return client.getPhotoURL(with: reference, maxWidth: maxWidth)
     }
-
-    // MARK: - Private Methods
-
 }

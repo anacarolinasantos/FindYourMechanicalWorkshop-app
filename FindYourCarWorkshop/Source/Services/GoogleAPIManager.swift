@@ -9,13 +9,12 @@
 import Moya
 import GooglePlaces
 
-final class GoogleAPIManager {
+class GoogleAPIManager {
     
     // MARK: - Static Reference
     static let shared = GoogleAPIManager()
     
     // MARK: - Private Properties
-    private let isOnMoyaProviderline = false
     private let provider: MoyaProvider<GoogleAPI>
     
     // MARK: - Private Initializer

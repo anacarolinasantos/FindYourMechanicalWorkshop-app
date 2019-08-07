@@ -13,12 +13,12 @@ import Kingfisher
 final class CarWorkshopTableViewCell: UITableViewCell, Reusable {
 
     // MARK: - Outlets
-    @IBOutlet weak var carWorkshopNameLabel: UILabel!
-    @IBOutlet weak var carWorkshopImage: UIImageView!
-    @IBOutlet weak var carWorkshopRatingLabel: UILabel!
+    @IBOutlet private weak var carWorkshopNameLabel: UILabel!
+    @IBOutlet private weak var carWorkshopImage: UIImageView!
+    @IBOutlet private weak var carWorkshopRatingLabel: UILabel!
     
-    @IBOutlet weak var carWorkshopTrailingSuperviewConstraint: NSLayoutConstraint!
-    @IBOutlet weak var carWorkshopTrailingRatingConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var carWorkshopTrailingSuperviewConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var carWorkshopTrailingRatingConstraint: NSLayoutConstraint!
     
     // MARK: - Properties
     private let kPlaceholderImageName = "placeholder-image"
@@ -29,14 +29,13 @@ final class CarWorkshopTableViewCell: UITableViewCell, Reusable {
         if let aPhotoURL = photoURL {
             let url = URL(string: aPhotoURL)
             carWorkshopImage.kf.indicatorType = .activity
-            carWorkshopImage.kf.setImage(with: url,
-                                         placeholder: UIImage(named: kPlaceholderImageName))
+            carWorkshopImage.kf.setImage(with: url)
         }
         
         carWorkshopNameLabel.text = workshop.name
         
         guard let rating = workshop.rating else {
-//            handleNameLabelConstraints()
+            handleNameLabelConstraints()
             return
         }
         carWorkshopRatingLabel.text = String(rating)
@@ -44,8 +43,6 @@ final class CarWorkshopTableViewCell: UITableViewCell, Reusable {
     
     // MARK: - Private Methods
     private func handleNameLabelConstraints() {
-        carWorkshopTrailingRatingConstraint.priority = UILayoutPriority(rawValue: 250)
-        carWorkshopTrailingSuperviewConstraint.priority = UILayoutPriority(rawValue: 1000)
         carWorkshopRatingLabel.isHidden = true
         layoutIfNeeded()
     }
