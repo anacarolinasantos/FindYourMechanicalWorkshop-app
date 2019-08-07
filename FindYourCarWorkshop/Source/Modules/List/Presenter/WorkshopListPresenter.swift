@@ -21,9 +21,7 @@ class WorkshopListPresenter: NSObject, WorkshopListPresenterInputProtocol, Works
     // MARK: - WorkshopListPresenterInputProtocol
     func viewDidLoad() {
         view.showLoading(true)
-        
         let currentLocation = getCurrentLocation()
-        
         interactor.fetchCarWorkshopList(near: currentLocation)
     }
     
@@ -31,22 +29,15 @@ class WorkshopListPresenter: NSObject, WorkshopListPresenterInputProtocol, Works
         interactor.fetchCarWorkshopList(near: location)
     }
     
-    
     func numberOfSections() -> Int {
         return 1
     }
     
     func numberOfItems(in section: Int) -> Int {
-        if workshops.isEmpty {
-            return 1
-        }
         return workshops.count
     }
     
-    func item(at indexPath: Int) -> Workshop? {
-        if workshops.isEmpty {
-            return nil
-        }
+    func item(at indexPath: Int) -> Workshop {
         return workshops[indexPath]
     }
     

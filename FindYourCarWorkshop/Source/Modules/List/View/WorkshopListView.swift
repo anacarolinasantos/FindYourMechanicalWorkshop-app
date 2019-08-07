@@ -12,6 +12,7 @@ class WorkshopListView: UIViewController, WorkshopListPresenterOutputProtocol, U
     
     // MARK: - Outlets
     @IBOutlet weak var listTableView: UITableView!
+    @IBOutlet weak var errorMessageLabel: UILabel!
     
     // MARK: - Properties
     private let kEmptyTableViewCellIdentifier = "EmptyTableViewCell"
@@ -32,7 +33,8 @@ class WorkshopListView: UIViewController, WorkshopListPresenterOutputProtocol, U
     }
     
     func showError(message: String) {
-//        listTableView.re
+        errorMessageLabel.isHidden = false
+        errorMessageLabel.text = message
         
         let alert = UIAlertController(title: "Sorry", message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
@@ -63,18 +65,14 @@ class WorkshopListView: UIViewController, WorkshopListPresenterOutputProtocol, U
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as CarWorkshopTableViewCell
         
-        guard let workshop = presenter.item(at: indexPath.row) else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: kEmptyTableViewCellIdentifier, for: indexPath)
-            return cell
-        }
-        
-        cell.setup(with: workshop)
+        cell.setup(with: presenter.item(at: indexPath.row))
         
         return cell
     }
     
     // MARK: - TableView Delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         presenter.didSelectItem(at: indexPath.row)
     }
 }

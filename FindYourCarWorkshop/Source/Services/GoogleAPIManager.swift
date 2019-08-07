@@ -70,6 +70,8 @@ final class GoogleAPIManager {
     private func filterGoogleSuccessfulStatus(with status: String) -> MoyaError? {
         var error: GoogleStatusResult
         switch status {
+        case GoogleStatusResult.zeroResults.rawValue:
+            error = GoogleStatusResult.zeroResults
         case GoogleStatusResult.overQueryLimit.rawValue:
             error = GoogleStatusResult.overQueryLimit
         case GoogleStatusResult.requestDenied.rawValue:

@@ -9,6 +9,7 @@
 import Foundation
 
 enum GoogleStatusResult: String {
+    case zeroResults = "ZERO_RESULTS"
     case overQueryLimit = "OVER_QUERY_LIMIT"
     case requestDenied = "REQUEST_DENIED"
     case invalidRequest = "INVALID_REQUEST"
@@ -16,6 +17,8 @@ enum GoogleStatusResult: String {
     
     public var errorDescription: String {
         switch self {
+        case .zeroResults:
+            return "No results found on this location."
         case .overQueryLimit:
             return "Request over Google Places API quota."
         case .requestDenied:
