@@ -16,6 +16,7 @@ class WorkshopListView: UIViewController, WorkshopListPresenterOutputProtocol, U
     
     // MARK: - Properties
     private let kEmptyTableViewCellIdentifier = "EmptyTableViewCell"
+    private let kTitleList = "Oficinas de Carro"
     
 	// MARK: - Viper Module Properties
 	var presenter: WorkshopListPresenterInputProtocol!
@@ -47,6 +48,9 @@ class WorkshopListView: UIViewController, WorkshopListPresenterOutputProtocol, U
 
 	// MARK: - Private Methods
     func prepareViewController() {
+        navigationItem.largeTitleDisplayMode = .always
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = kTitleList
         listTableView.dataSource = self
         listTableView.delegate = self
     }

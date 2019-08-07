@@ -47,7 +47,7 @@ class WorkshopDetailView: UIViewController, WorkshopDetailPresenterOutputProtoco
     }
     
     func loadData(with workshop: Workshop) {
-        self.title = workshop.name
+        title = workshop.name
         
         if let photoURL = presenter.getPhotoURL() {
             loadImageView(with: photoURL)
@@ -74,7 +74,8 @@ class WorkshopDetailView: UIViewController, WorkshopDetailPresenterOutputProtoco
     
 	// MARK: - Private Methods
     private func prepareViewController() {
-        self.navigationItem.largeTitleDisplayMode = .always
+        navigationItem.largeTitleDisplayMode = .always
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     private func loadImageView(with photoURL: String) {
