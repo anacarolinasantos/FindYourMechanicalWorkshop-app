@@ -7,15 +7,17 @@
 //
 
 import UIKit
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        GMSServices.provideAPIKey(GoogleAPIConfig.apiKey)
         
         let router = WorkshopListRouter()
         router.presentAsRoot(window: self.window!)

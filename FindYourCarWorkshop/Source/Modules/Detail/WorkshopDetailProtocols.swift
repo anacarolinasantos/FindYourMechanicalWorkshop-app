@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 // MARK: - Router
 protocol WorkshopDetailRouterProtocol: class {
@@ -16,12 +17,13 @@ protocol WorkshopDetailRouterProtocol: class {
 // MARK: - Interactor
 protocol WorkshopDetailInteractorInputProtocol {
     func fetchCarWorkshopDetail(with id: String)
+    func getPhotoURL(with reference: String, maxWidth: Int) -> String
 }
 
 // MARK: - Presenter
 protocol WorkshopDetailPresenterInputProtocol: class {
     func viewDidLoad()
-    func showMapsLaunchOption()
+    func getPhotoURL() -> String?
 }
 
 protocol WorkshopDetailInteractorOutputProtocol: class {
@@ -33,6 +35,6 @@ protocol WorkshopDetailInteractorOutputProtocol: class {
 protocol WorkshopDetailPresenterOutputProtocol: class {
     func showLoading(_ loading: Bool)
     func showError(message: String)
-    func loadData(title: String)
-    func presentMapsOption()
+    func loadData(with workshop: Workshop)
+    func addMapMarker(with: GMSMarker)
 }

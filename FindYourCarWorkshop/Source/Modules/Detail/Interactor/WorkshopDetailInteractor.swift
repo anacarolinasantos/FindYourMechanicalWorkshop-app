@@ -14,9 +14,15 @@ class WorkshopDetailInteractor: NSObject, WorkshopDetailInteractorInputProtocol 
 	// MARK: - Viper Module Properties
     weak var output: WorkshopDetailInteractorOutputProtocol!
 
+    private let client: GoogleAPIManager
+    
+    init(client: GoogleAPIManager) {
+        self.client = client
+    }
+    
 	// MARK: - WorkshopDetailInteractorInputProtocol
     func fetchCarWorkshopDetail(with id: String) {
-        GoogleAPIManager.shared.getPlaceDetail(with: "ChIJ6SZoHaVVzpQRuE9OpSRuu-w") { [weak self] (result, error) in
+        client.getPlaceDetail(with: id) { [weak self] (result, error) in
             
             if let aError = error {
                 switch aError {
@@ -34,7 +40,8 @@ class WorkshopDetailInteractor: NSObject, WorkshopDetailInteractorInputProtocol 
             }
         }
     }
-
-    // MARK: - Private Methods
-
+    
+    func getPhotoURL(with reference: String, maxWidth: Int) -> String {
+        return client.getPhotoURL(with: reference, maxWidth: maxWidth)
+    }
 }

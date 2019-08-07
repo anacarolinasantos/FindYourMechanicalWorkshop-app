@@ -17,7 +17,6 @@ struct Workshop: Decodable {
     let address: String
     let formattedAddress: String?
     let formattedPhoneNumber: String?
-    let website: String?
     let rating: Double?
     
     enum CodingKeys : String, CodingKey {
@@ -25,7 +24,6 @@ struct Workshop: Decodable {
         case id = "place_id"
         case formattedAddress = "formatted_address"
         case formattedPhoneNumber = "formatted_phone_number"
-        case website
         case geometry
         case name
         case rating
@@ -42,6 +40,5 @@ struct Workshop: Decodable {
         rating = try? values.decode(Double.self, forKey: .rating)
         formattedAddress = try? values.decode(String.self, forKey: .formattedAddress)
         formattedPhoneNumber = try? values.decode(String.self, forKey: .formattedPhoneNumber)
-        website = try? values.decode(String.self, forKey: .website)
     }
 }

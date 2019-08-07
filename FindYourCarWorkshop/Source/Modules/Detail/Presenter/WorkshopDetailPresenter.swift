@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class WorkshopDetailPresenter: NSObject, WorkshopDetailPresenterInputProtocol, WorkshopDetailInteractorOutputProtocol {
 
@@ -29,22 +30,35 @@ class WorkshopDetailPresenter: NSObject, WorkshopDetailPresenterInputProtocol, W
         interactor.fetchCarWorkshopDetail(with: workshop.id)
     }
     
-    func showMapsLaunchOption() {
-        view.presentMapsOption()
+    func getPhotoURL() -> String? {
+        if let photos = workshop.photos {
+            return interactor.getPhotoURL(with: photos[0].reference, maxWidth: Int(UIScreen.main.bounds.width))
+        }
+        return nil
     }
 
     // MARK: - WorkshopDetailPresenterInteractorOutputProtocol
     func handleSuccess(with result: Workshop) {
         view.showLoading(false)
         workshop = result
-        view.loadData(title: workshop.name)
+        view.loadData(with: workshop)
+        view.addMapMarker(with: getCarWorkshopMarker())
     }
     
     func handleFailure(with message: String) {
         view.showLoading(false)
         view.showError(message: message)
     }
-    
 
 	// MARK: - Private Methods
+    private func getCarWorkshopMarker() -> GMSMarker {
+        let location = CLLocationCoordinate2D(latitude: workshop.geometry.latitude, longitude: workshop.geometry.longitude)
+        
+        let marker = GMSMarker()
+        marker.position = location
+        marker.title = workshop.name
+        marker.snippet = workshop.address
+        
+        return marker
+    }
 }

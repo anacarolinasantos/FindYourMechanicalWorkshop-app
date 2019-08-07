@@ -26,7 +26,7 @@ class WorkshopDetailRouter: NSObject, WorkshopDetailRouterProtocol {
 		super.init()
 
 		let view = self.viewControllerFromStoryboard()
-        let interactor = WorkshopDetailInteractor()
+        let interactor = WorkshopDetailInteractor(client: GoogleAPIManager.shared)
         let presenter = WorkshopDetailPresenter(workshop: workshop)
 
 		presenter.interactor = interactor

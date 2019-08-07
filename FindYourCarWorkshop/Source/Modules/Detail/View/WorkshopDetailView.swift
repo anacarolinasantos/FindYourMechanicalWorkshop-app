@@ -13,9 +13,19 @@ import MapKit
 class WorkshopDetailView: UIViewController, WorkshopDetailPresenterOutputProtocol {
     
     // MARK: - Outlets
-    @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var detailLabel: UILabel!
-    @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet private weak var carWorkshopImageView: UIImageView!
+    @IBOutlet private weak var carWorkshopRatingLabel: UILabel!
+    @IBOutlet private weak var carWorkshopAddressLabel: UILabel!
+    @IBOutlet private weak var carWorkshopPhoneLabel: UILabel!
+    @IBOutlet private weak var mapView: GMSMapView!
+    
+    @IBOutlet weak var phoneStackView: UIStackView!
+    
+    @IBOutlet weak var imageViewHeightConstraint: NSLayoutConstraint!
+    
+    // MARK: - Properties
+    private let kPlaceholderImageName = "placeholder-image"
+    private let kZoom: Float = 15.0
 
 	// MARK: - Viper Module Properties
 	var presenter: WorkshopDetailPresenterInputProtocol!
@@ -23,6 +33,7 @@ class WorkshopDetailView: UIViewController, WorkshopDetailPresenterOutputProtoco
 	// MARK: - Override methods
 	override func viewDidLoad() {
         super.viewDidLoad()
+        prepareViewController()
         presenter.viewDidLoad()
     }
 
@@ -35,65 +46,30 @@ class WorkshopDetailView: UIViewController, WorkshopDetailPresenterOutputProtoco
         
     }
     
-    func loadData(title: String) {
-        self.title = title
-//        addressLabel.text = presenter.workshop.address
-//        detailLabel.text = presenter.workshop.address + presenter.workshop.name
+    func loadData(with workshop: Workshop) {
+        self.title = workshop.name
         
-//        let location = CLLocationCoordinate2D(latitude: presenter.workshop.geometry.latitude, longitude: presenter.workshop.geometry.longitude)
+        if let photoURL = presenter.getPhotoURL() {
+            loadImageView(with: photoURL)
+        } else {
+            imageViewHeightConstraint.constant = 0
+            carWorkshopImageView.isHidden = true
+        }
         
-        let marker = GMSMarker()
-//        marker.position = location
-//        marker.title = presenter.workshop.name
-//        marker.snippet = presenter.workshop.address
-//        marker.map = mapView
+        if let rating = workshop.rating {
+            carWorkshopRatingLabel.text = String(rating)
+        } else {
+            carWorkshopRatingLabel.isHidden = true
+        }
         
-//        mapView.animate(toLocation: location)
-//        mapView.animate(toZoom: 16)
+        carWorkshopAddressLabel.text = workshop.formattedAddress ?? workshop.address
+        loadPhoneLabel(workshop.formattedPhoneNumber)
     }
-
-    func presentMapsOption() {
-//        let actionSheet = UIAlertController(title: nil, message: "Escolha um dos apps de mapa", preferredStyle: .actionSheet)
-//        let location = CLLocationCoordinate2D(latitude: presenter.workshop.geometry.latitude, longitude: presenter.workshop.geometry.longitude)
-        //Waze
-//        if let url = URL(string: "waze://app"),
-//            UIApplication.shared.canOpenURL(url){
-//            let action = UIAlertAction(title: "Waze", style: .default) { (action) in
-//                guard let url = URL(string:"https://waze.com/ul?q=ll=\(location.latitude),\(location.longitude)&navigate=yes") else {return}
-//                UIApplication.shared.open(url)
-//            }
-//            actionSheet.addAction(action)
-//        }
-        
-        //Google Maps
-//        if let url = URL(string: "comgooglemaps://app"),
-//            UIApplication.shared.canOpenURL(url){
-//            let action = UIAlertAction(title: "Google Maps", style: .default) { (action) in
-//                guard let url = URL(string:"comgooglemaps://?daddr=\(location.latitude),\(location.longitude)&directionsmode=transit") else {return}
-//                UIApplication.shared.open(url)
-//            }
-//            actionSheet.addAction(action)
-//        }
-        
-//        if actionSheet.actions.count > 0 {
-//            //Apple Maps
-//            let action = UIAlertAction(title: "Maps", style: .default) { (action) in
-//                let destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)))
-//                destination.name = self.presenter.workshop.name
-//
-//                MKMapItem.openMaps(with: [destination], launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
-//            }
-//            actionSheet.addAction(action)
-//
-//            self.present(actionSheet, animated: true, completion: nil)
-//        }else{
-//            let destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)))
-//            destination.name = self.presenter.workshop.name
-//            
-//            MKMapItem.openMaps(with: [destination], launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
-//        }
-        
-        
+    
+    func addMapMarker(with marker: GMSMarker) {
+        marker.map = mapView
+        mapView.animate(toLocation: marker.position)
+        mapView.animate(toZoom: kZoom)
     }
     
 	// MARK: - Private Methods
@@ -101,9 +77,17 @@ class WorkshopDetailView: UIViewController, WorkshopDetailPresenterOutputProtoco
         self.navigationItem.largeTitleDisplayMode = .always
     }
     
-    // MARK: - Actions
-    @IBAction func tapGoTo(_ sender: UIButton) {
-        // Open and show coordinate
-        self.presenter.showMapsLaunchOption()
+    private func loadImageView(with photoURL: String) {
+        let url = URL(string: photoURL)
+        carWorkshopImageView.kf.indicatorType = .activity
+        carWorkshopImageView.kf.setImage(with: url)
+    }
+    
+    private func loadPhoneLabel(_ string: String?) {
+        guard let phone = string else {
+            phoneStackView.isHidden = true
+            return
+        }
+        carWorkshopPhoneLabel.text = phone
     }
 }
