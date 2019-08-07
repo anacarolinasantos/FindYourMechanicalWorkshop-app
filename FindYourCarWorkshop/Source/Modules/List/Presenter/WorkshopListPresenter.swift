@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import CoreLocation
 
-class WorkshopListPresenter: NSObject, WorkshopListPresenterInputProtocol, WorkshopListInteractorOutputProtocol {
+class WorkshopListPresenter: NSObject, WorkshopListPresenterInputProtocol, WorkshopListInteractorOutputProtocol, CLLocationManagerDelegate {
 
     // MARK: - Properties
+    private var locationManager = CLLocationManager()
     private var workshops: [Workshop] = []
+    
     private let kMaxImageWidth = 70
+    
+    private var currentLatitude = -23.593858
+    private var currentLongitude = -46.679999
     
 	// MARK: - Viper Module Properties
     weak var view: WorkshopListPresenterOutputProtocol!
@@ -21,9 +27,14 @@ class WorkshopListPresenter: NSObject, WorkshopListPresenterInputProtocol, Works
 
     // MARK: - WorkshopListPresenterInputProtocol
     func viewDidLoad() {
+        self.locationManager.requestWhenInUseAuthorization()
+        if (CLLocationManager.locationServicesEnabled()) {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+            locationManager.startUpdatingLocation()
+        }
+        
         view.showLoading(true)
-        let currentLocation = getCurrentLocation()
-        interactor.fetchCarWorkshopList(near: currentLocation)
     }
     
     func searchWorkshops(near location: Location) {
@@ -66,7 +77,22 @@ class WorkshopListPresenter: NSObject, WorkshopListPresenterInputProtocol, Works
     }
     
     // MARK: - Private Methods
-    private func getCurrentLocation() -> Location {
-        return Location(-23.586079, -46.7786114)
+    private func fetchCarWorkshopList() {
+        interactor.fetchCarWorkshopList(near: Location(currentLatitude, currentLongitude))
+    }
+    
+    // MARK: - Core Location Manager Delegate
+    private func locationManager(manager: CLLocationManager, didFailWithError error: NSError){
+        view.showError(message: "Error trying to get current location")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let userLocation = locations.last else { return }
+        
+        currentLatitude = userLocation.coordinate.latitude
+        currentLongitude = userLocation.coordinate.longitude
+        
+        locationManager.stopUpdatingLocation()
+        fetchCarWorkshopList()
     }
 }

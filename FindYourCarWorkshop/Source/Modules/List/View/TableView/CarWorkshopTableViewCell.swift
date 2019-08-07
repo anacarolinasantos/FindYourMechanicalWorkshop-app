@@ -18,8 +18,10 @@ final class CarWorkshopTableViewCell: UITableViewCell, Reusable {
     @IBOutlet weak var carWorkshopRatingLabel: UILabel!
     
     @IBOutlet weak var carWorkshopTrailingSuperviewConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var carWorkshopTrailingRatingConstraint: NSLayoutConstraint!
+    
+    // MARK: - Properties
+    private let kPlaceholderImageName = "placeholder-image"
     
     // MARK: - Setup Cell
     func setup(with workshop: Workshop, photoURL: String?) {
@@ -28,7 +30,7 @@ final class CarWorkshopTableViewCell: UITableViewCell, Reusable {
             let url = URL(string: aPhotoURL)
             carWorkshopImage.kf.indicatorType = .activity
             carWorkshopImage.kf.setImage(with: url,
-                                         placeholder: UIImage(named: "placeholder-image"))
+                                         placeholder: UIImage(named: kPlaceholderImageName))
         }
         
         carWorkshopNameLabel.text = workshop.name
