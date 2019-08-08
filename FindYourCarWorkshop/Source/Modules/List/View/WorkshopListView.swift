@@ -18,6 +18,8 @@ class WorkshopListView: UIViewController, WorkshopListPresenterOutputProtocol, U
     private let kEmptyTableViewCellIdentifier = "EmptyTableViewCell"
     private let kTitleList = "Oficinas de Carro"
     
+    private var vSpinner : UIView?
+
 	// MARK: - Viper Module Properties
 	var presenter: WorkshopListPresenterInputProtocol!
 
@@ -30,7 +32,11 @@ class WorkshopListView: UIViewController, WorkshopListPresenterOutputProtocol, U
 
     // MARK: - WorkshopListPresenterOutputProtocol
     func showLoading(_ loading: Bool) {
-        
+        if loading {
+            showSpinner()
+        } else {
+            removeSpinner()
+        }
     }
     
     func showError(message: String) {
@@ -47,12 +53,35 @@ class WorkshopListView: UIViewController, WorkshopListPresenterOutputProtocol, U
     }
 
 	// MARK: - Private Methods
-    func prepareViewController() {
+    private func prepareViewController() {
         navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
         title = kTitleList
+        listTableView.contentInset = UIEdgeInsets(top: -1, left: 0, bottom: 0, right: 0)
         listTableView.dataSource = self
         listTableView.delegate = self
+    }
+    
+    private func showSpinner() {
+        let spinnerView = UIView.init(frame: view.bounds)
+        spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+        let ai = UIActivityIndicatorView.init(style: .whiteLarge)
+        ai.startAnimating()
+        ai.center = spinnerView.center
+        
+        DispatchQueue.main.async {
+            spinnerView.addSubview(ai)
+            self.view.addSubview(spinnerView)
+        }
+        
+        vSpinner = spinnerView
+    }
+    
+    private func removeSpinner() {
+        DispatchQueue.main.async {
+            self.vSpinner?.removeFromSuperview()
+            self.vSpinner = nil
+        }
     }
 
     // MARK: - TableView Data Source
@@ -75,5 +104,9 @@ class WorkshopListView: UIViewController, WorkshopListPresenterOutputProtocol, U
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         presenter.didSelectItem(at: indexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat.leastNonzeroMagnitude
     }
 }

@@ -26,6 +26,8 @@ class WorkshopDetailView: UIViewController, WorkshopDetailPresenterOutputProtoco
     // MARK: - Properties
     private let kPlaceholderImageName = "placeholder-image"
     private let kZoom: Float = 15.0
+    
+    private var vSpinner : UIView?
 
 	// MARK: - Viper Module Properties
 	var presenter: WorkshopDetailPresenterInputProtocol!
@@ -39,11 +41,17 @@ class WorkshopDetailView: UIViewController, WorkshopDetailPresenterOutputProtoco
 
     // MARK: - WorkshopDetailPresenterOutputProtocol
     func showLoading(_ loading: Bool) {
-        
+        if loading {
+            showSpinner()
+        } else {
+            removeSpinner()
+        }
     }
     
     func showError(message: String) {
-        
+        let alert = UIAlertController(title: "Sorry", message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
     func loadData(with workshop: Workshop) {
@@ -90,5 +98,27 @@ class WorkshopDetailView: UIViewController, WorkshopDetailPresenterOutputProtoco
             return
         }
         carWorkshopPhoneLabel.text = phone
+    }
+    
+    private func showSpinner() {
+        let spinnerView = UIView.init(frame: view.bounds)
+        spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+        let ai = UIActivityIndicatorView.init(style: .whiteLarge)
+        ai.startAnimating()
+        ai.center = spinnerView.center
+        
+        DispatchQueue.main.async {
+            spinnerView.addSubview(ai)
+            self.view.addSubview(spinnerView)
+        }
+        
+        vSpinner = spinnerView
+    }
+    
+    private func removeSpinner() {
+        DispatchQueue.main.async {
+            self.vSpinner?.removeFromSuperview()
+            self.vSpinner = nil
+        }
     }
 }
