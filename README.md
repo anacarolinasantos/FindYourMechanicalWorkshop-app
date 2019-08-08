@@ -31,7 +31,3 @@ In this project, [Google Places API](https://developers.google.com/places/web-se
  ```
 
 And insert your Google API Key.
- 
- ## Project Structure
- 
- 
