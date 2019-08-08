@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Location: Decodable {
+struct Location: Equatable, Decodable {
     let latitude : Double
     let longitude : Double
     
@@ -28,5 +28,9 @@ struct Location: Decodable {
         let location = try values.nestedContainer(keyedBy: CodingKeys.self, forKey: .location)
         latitude = try location.decode(Double.self, forKey: .latitude)
         longitude = try location.decode(Double.self, forKey: .longitude)
+    }
+    
+    static func == (lhs: Location, rhs: Location) -> Bool {
+        return lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
     }
 }

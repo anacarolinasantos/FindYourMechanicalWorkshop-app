@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Workshop: Decodable {
+struct Workshop: Equatable, Decodable {
     
     let id: String
     let geometry: Location
@@ -40,5 +40,16 @@ struct Workshop: Decodable {
         rating = try? values.decode(Double.self, forKey: .rating)
         formattedAddress = try? values.decode(String.self, forKey: .formattedAddress)
         formattedPhoneNumber = try? values.decode(String.self, forKey: .formattedPhoneNumber)
+    }
+    
+    static func == (lhs: Workshop, rhs: Workshop) -> Bool {
+        return lhs.id == rhs.id &&
+            lhs.geometry == rhs.geometry &&
+            lhs.name == lhs.name &&
+            lhs.photos == rhs.photos &&
+            lhs.address == rhs.address &&
+            lhs.formattedAddress == rhs.formattedAddress &&
+            lhs.formattedPhoneNumber == rhs.formattedPhoneNumber &&
+            lhs.rating == rhs.rating
     }
 }

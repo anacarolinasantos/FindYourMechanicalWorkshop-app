@@ -15,7 +15,7 @@ class GoogleAPIManager {
     static let shared = GoogleAPIManager()
     
     // MARK: - Private Properties
-    private let provider: MoyaProvider<GoogleAPI>
+    var provider: MoyaProvider<GoogleAPI>
     
     // MARK: - Private Initializer
     private init() {

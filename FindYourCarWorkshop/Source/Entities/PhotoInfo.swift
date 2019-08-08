@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct PhotoInfo: Decodable {
+struct PhotoInfo: Equatable, Decodable {
     
     let height : Int
     let width : Int
@@ -25,5 +25,11 @@ struct PhotoInfo: Decodable {
         height = try values.decode(Int.self, forKey: CodingKeys.height)
         width = try values.decode(Int.self, forKey: CodingKeys.width)
         reference = try values.decode(String.self, forKey: CodingKeys.reference)
+    }
+    
+    static func == (lhs: PhotoInfo, rhs: PhotoInfo) -> Bool {
+        return lhs.height == rhs.height &&
+            lhs.width == rhs.width &&
+            lhs.reference == rhs.reference
     }
 }
